@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PagCafe</string>
+    <string name="wait">Aguarde</string>
+
+    <string name="transactionCode">Transaction Code:</string>
+    <string name="ldate">Date:</string>
+    <string name="time">Time:</string>
+    <string name="hostNsu">Host NSU:</string>
+    <string name="cardBrand">Card Brand:</string>
+    <string name="bin">Bin:</string>
+    <string name="holder">Holder:</string>
+    <string name="userReference">User Reference:</string>
+    <string name="terminalSerialNumber">Serial Number:</string>
+
+    <string-array name="menus">
+        <item>Fazer uma venda</item>
+        <item>Fazer Estorno</item>
+        <item>Consultar última venda</item>
+    </string-array>
+    <string name="title_activity_last_transation">LastTransationActivity</string>
+    <string name="title_activity_cancel_transaction">CancelTransactionActivity</string>
+
+
+</resources>
