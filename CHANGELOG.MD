@@ -1,3 +1,6 @@
+### 1.1.1 - 25/08/2017
+- Adicionado procedimento para tratamento dos erros -1003 e -2033.  
+
 ### 1.1.0 - 24/07/2017
 - Adicionado comandos getSerial() e SetVersionName()
 - Adicionado suporte ao uso do Mac Address para conexão com o terminal no SDK Android
