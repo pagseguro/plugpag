@@ -1,148 +1,206 @@
 package br.uol.pagseguro.client.pagcafe.model;
 
-/**
- * Created by tqi_hsantos on 11/07/17.
- */
 
-public class Transaction {
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.text.TextUtils;
 
-    private Type_Transaction type;
-    private String message;
-    private String transactionCode;
-    private String date;
-    private String time;
-    private String hostNsu;
-    private String cardBrand;
-    private String bin;
-    private String holder;
-    private String userReference;
-    private String terminalSerialNumber;
+import java.io.Serializable;
 
-    private int result;
+public class Transaction implements Serializable {
 
-    private int paymentMethod;
-    private String samount;
+    // ---------------------------------------------------------------------------------------------
+    // Instance attributes
+    // ---------------------------------------------------------------------------------------------
 
-    public Transaction(Type_Transaction type) {
-        this.type = type;
+    private Type_Transaction mType = null;
+    private String mMessage = null;
+    private String mTransactionCode = null;
+    private String mDate = null;
+    private String mTime = null;
+    private String mHostNsu = null;
+    private String mCardBrand = null;
+    private String mBin = null;
+    private String mHolder = null;
+    private String mUserReference = null;
+    private String mTerminalSerialNumber = null;
+    private int mPaymentMethod = 0;
+    private int mResult = 0;
+    private String mAmount = null;
+
+    // ---------------------------------------------------------------------------------------------
+    // Constructors
+    // ---------------------------------------------------------------------------------------------
+
+    /**
+     * Creates a new empty Transaction.
+     *
+     * @param type Transaction type.
+     */
+    public Transaction(@NonNull Type_Transaction type) {
+        if (type == null) {
+            throw new RuntimeException("Transaction type cannot be null");
+        }
+
+        this.mType = type;
     }
 
-    public Transaction(Type_Transaction type, int paymentMethod, String samount) {
-        this.type = type;
-        this.paymentMethod = paymentMethod;
-        this.samount = samount;
+    /**
+     * Creates a new Transaction.
+     *
+     * @param type Transaction type.
+     * @param paymentMethod Payment method used in the transaction.
+     * @param amount String representation of the transaction value.
+     */
+    public Transaction(@NonNull Type_Transaction type, int paymentMethod, @NonNull String amount) {
+        if (type == null) {
+            throw new RuntimeException("Transaction type cannot be null");
+        }
+
+        if (TextUtils.isEmpty(amount)) {
+            throw new RuntimeException("Transaction amount cannot be null");
+        }
+
+        this.mType = type;
+        this.mPaymentMethod = paymentMethod;
+        this.mAmount = amount;
     }
+
+    /**
+     * Creates a new Transaction copying the contents of another Transaction.
+     *
+     * @param otherTransaction Transaction to be copied.
+     */
+    public Transaction(@Nullable Transaction otherTransaction) {
+        this.mType = otherTransaction.mType;
+        this.mMessage = otherTransaction.mMessage;
+        this.mTransactionCode = otherTransaction.mTransactionCode;
+        this.mDate = otherTransaction.mDate;
+        this.mTime = otherTransaction.mTime;
+        this.mHostNsu = otherTransaction.mHostNsu;
+        this.mCardBrand = otherTransaction.mCardBrand;
+        this.mBin = otherTransaction.mBin;
+        this.mHolder = otherTransaction.mHolder;
+        this.mUserReference = otherTransaction.mUserReference;
+        this.mTerminalSerialNumber = otherTransaction.mTerminalSerialNumber;
+        this.mResult = otherTransaction.mResult;
+        this.mPaymentMethod = otherTransaction.mPaymentMethod;
+        this.mAmount = otherTransaction.mAmount;
+    }
+
+    // ---------------------------------------------------------------------------------------------
+    // Getters and setters
+    // ---------------------------------------------------------------------------------------------
 
     public Type_Transaction getType() {
-
-        return type;
+        return mType;
     }
 
     public void setType(Type_Transaction type) {
-        this.type = type;
+        this.mType = type;
     }
 
     public String getMessage() {
-        return message;
+        return mMessage;
     }
 
     public void setMessage(String message) {
-        this.message = message;
+        this.mMessage = message;
     }
 
     public String getTransactionCode() {
-        return transactionCode;
+        return mTransactionCode;
     }
 
     public void setTransactionCode(String transactionCode) {
-        this.transactionCode = transactionCode;
+        this.mTransactionCode = transactionCode;
     }
 
     public String getDate() {
-        return date;
+        return mDate;
     }
 
     public void setDate(String date) {
-        this.date = date;
+        this.mDate = date;
     }
 
     public String getTime() {
-        return time;
+        return mTime;
     }
 
     public void setTime(String time) {
-        this.time = time;
+        this.mTime = time;
     }
 
     public String getHostNsu() {
-        return hostNsu;
+        return mHostNsu;
     }
 
     public void setHostNsu(String hostNsu) {
-        this.hostNsu = hostNsu;
+        this.mHostNsu = hostNsu;
     }
 
     public String getCardBrand() {
-        return cardBrand;
+        return mCardBrand;
     }
 
     public void setCardBrand(String cardBrand) {
-        this.cardBrand = cardBrand;
+        this.mCardBrand = cardBrand;
     }
 
     public String getBin() {
-        return bin;
+        return mBin;
     }
 
     public void setBin(String bin) {
-        this.bin = bin;
+        this.mBin = bin;
     }
 
     public String getHolder() {
-        return holder;
+        return mHolder;
     }
 
     public void setHolder(String holder) {
-        this.holder = holder;
+        this.mHolder = holder;
     }
 
     public String getUserReference() {
-        return userReference;
+        return mUserReference;
     }
 
     public void setUserReference(String userReference) {
-        this.userReference = userReference;
+        this.mUserReference = userReference;
     }
 
     public String getTerminalSerialNumber() {
-        return terminalSerialNumber;
+        return mTerminalSerialNumber;
     }
 
     public void setTerminalSerialNumber(String terminalSerialNumber) {
-        this.terminalSerialNumber = terminalSerialNumber;
+        this.mTerminalSerialNumber = terminalSerialNumber;
     }
 
     public int getResult() {
-        return result;
+        return mResult;
     }
 
     public void setResult(int result) {
-        this.result = result;
+        this.mResult = result;
     }
 
     public int getPaymentMethod() {
-        return paymentMethod;
+        return mPaymentMethod;
     }
 
     public void setPaymentMethod(int paymentMethod) {
-        this.paymentMethod = paymentMethod;
+        this.mPaymentMethod = paymentMethod;
     }
 
-    public String getSamount() {
-        return samount;
+    public String getAmount() {
+        return mAmount;
     }
 
-    public void setSamount(String samount) {
-        this.samount = samount;
+    public void setAmount(String amount) {
+        this.mAmount = amount;
     }
 }

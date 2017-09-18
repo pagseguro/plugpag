@@ -9,28 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".activity.MenuActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.PaymentSelect">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activity.Result" />
-        <activity android:name=".activity.CoffeeSelect" />
-        <activity
-            android:name=".activity.LastTransationActivity"
-            android:label="@string/title_activity_last_transation" />
-        <activity
-            android:name=".activity.CancelTransactionActivity"
-            android:label="@string/title_activity_cancel_transaction"></activity>
+        <activity android:name=".activity.CoffeeSelectionActivity"/>
     </application>
 
 </manifest>

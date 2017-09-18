@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">PagCafe</string>
     <string name="wait">Aguarde</string>
+    <string name="wait_with_count">Aguarde (%d)</string>
 
     <string name="transactionCode">Transaction Code:</string>
-    <string name="ldate">Date:</string>
+    <string name="date">Date:</string>
     <string name="time">Time:</string>
     <string name="hostNsu">Host NSU:</string>
     <string name="cardBrand">Card Brand:</string>
@@ -20,5 +21,29 @@
     <string name="title_activity_last_transation">LastTransationActivity</string>
     <string name="title_activity_cancel_transaction">CancelTransactionActivity</string>
 
+    <string name="menu_sale">Fazer uma venda</string>
+    <string name="menu_sale_reversal">Fazer estorno</string>
+    <string name="menu_query_last_sale">Consultar última venda</string>
 
+    <!-- Pluralization -->
+    <plurals name="coffee">
+        <item quantity="one">%d Café</item>
+        <item quantity="other">%d Cafés</item>
+    </plurals>
+
+    <string name="currency_with_value">R$ %.2f</string>
+    <string name="button_plus">+</string>
+    <string name="button_minus">-</string>
+    <string name="button_pay">PAGAR</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="error_code">Erro: %d</string>
+    <string name="error_detail_header">Detalhe: </string>
+    <string name="error_detail">%s</string>
+    <string name="debit">Débito</string>
+    <string name="credit">Crédito</string>
+
+    <string name="ok">OK</string>
+
+    <string name="last_transaction_failed">Última transação não concluída</string>
 </resources>
