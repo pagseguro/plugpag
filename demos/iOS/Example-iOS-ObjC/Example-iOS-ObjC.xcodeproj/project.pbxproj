@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		185956B31F58600600616BD9 /* libBTSerial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 185956B11F58600600616BD9 /* libBTSerial.a */; };
+		185956B41F58600600616BD9 /* libPlugPag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 185956B21F58600600616BD9 /* libPlugPag.a */; };
+		1861761D1F3BB6B4008DE3E7 /* PP_PeripheralListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861761C1F3BB6B4008DE3E7 /* PP_PeripheralListController.m */; };
+		1865A1E21F39FA9C00A43763 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865A1E11F39FA9C00A43763 /* main.m */; };
+		1865A1E51F39FA9C00A43763 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865A1E41F39FA9C00A43763 /* AppDelegate.m */; };
+		1865A1E81F39FA9C00A43763 /* PP_MenuListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865A1E71F39FA9C00A43763 /* PP_MenuListController.m */; };
+		1865A1EB1F39FA9C00A43763 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1865A1E91F39FA9C00A43763 /* Main.storyboard */; };
+		1865A1ED1F39FA9C00A43763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1865A1EC1F39FA9C00A43763 /* Assets.xcassets */; };
+		1865A1F01F39FA9C00A43763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1865A1EE1F39FA9C00A43763 /* LaunchScreen.storyboard */; };
+		1865A2041F3A230800A43763 /* PP_ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865A2031F3A230800A43763 /* PP_ChooseViewController.m */; };
+		18E73E481F4219D0001682C1 /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E73E471F4219D0001682C1 /* UIUtils.m */; };
+		18E73E4D1F421CA0001682C1 /* GetLastApprovedTransactionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E73E4C1F421CA0001682C1 /* GetLastApprovedTransactionController.m */; };
+		18E73E501F422252001682C1 /* CancelTransactionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E73E4F1F422252001682C1 /* CancelTransactionController.m */; };
+		18E73E531F4228D8001682C1 /* SimplePaymentTransactionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E73E521F4228D8001682C1 /* SimplePaymentTransactionController.m */; };
+		4B59721FF6E4A90552D7747C /* libPods-Example-iOS-ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AFB5269B37851BB9EE0135 /* libPods-Example-iOS-ObjC.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		185956B11F58600600616BD9 /* libBTSerial.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBTSerial.a; path = "../Example-iOS-Swift/Example-iOS-Swift/libBTSerial.a"; sourceTree = "<group>"; };
+		185956B21F58600600616BD9 /* libPlugPag.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPlugPag.a; path = "../Example-iOS-Swift/Example-iOS-Swift/libPlugPag.a"; sourceTree = "<group>"; };
+		1861761B1F3BB6B4008DE3E7 /* PP_PeripheralListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PP_PeripheralListController.h; sourceTree = "<group>"; };
+		1861761C1F3BB6B4008DE3E7 /* PP_PeripheralListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PP_PeripheralListController.m; sourceTree = "<group>"; };
+		1865A1DD1F39FA9C00A43763 /* Example-iOS-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-iOS-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1865A1E11F39FA9C00A43763 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1865A1E31F39FA9C00A43763 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1865A1E41F39FA9C00A43763 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1865A1E61F39FA9C00A43763 /* PP_MenuListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PP_MenuListController.h; sourceTree = "<group>"; };
+		1865A1E71F39FA9C00A43763 /* PP_MenuListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PP_MenuListController.m; sourceTree = "<group>"; };
+		1865A1EA1F39FA9C00A43763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1865A1EC1F39FA9C00A43763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1865A1EF1F39FA9C00A43763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1865A1F11F39FA9C00A43763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1865A2001F3A00E900A43763 /* PlugPag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlugPag.h; sourceTree = "<group>"; };
+		1865A2021F3A230800A43763 /* PP_ChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PP_ChooseViewController.h; sourceTree = "<group>"; };
+		1865A2031F3A230800A43763 /* PP_ChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PP_ChooseViewController.m; sourceTree = "<group>"; };
+		18E73E461F4219D0001682C1 /* UIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
+		18E73E471F4219D0001682C1 /* UIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtils.m; sourceTree = "<group>"; };
+		18E73E4B1F421CA0001682C1 /* GetLastApprovedTransactionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLastApprovedTransactionController.h; sourceTree = "<group>"; };
+		18E73E4C1F421CA0001682C1 /* GetLastApprovedTransactionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLastApprovedTransactionController.m; sourceTree = "<group>"; };
+		18E73E4E1F422252001682C1 /* CancelTransactionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancelTransactionController.h; sourceTree = "<group>"; };
+		18E73E4F1F422252001682C1 /* CancelTransactionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancelTransactionController.m; sourceTree = "<group>"; };
+		18E73E511F4228D8001682C1 /* SimplePaymentTransactionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePaymentTransactionController.h; sourceTree = "<group>"; };
+		18E73E521F4228D8001682C1 /* SimplePaymentTransactionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePaymentTransactionController.m; sourceTree = "<group>"; };
+		49AFB5269B37851BB9EE0135 /* libPods-Example-iOS-ObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example-iOS-ObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56EA8BC4D5B8D3599F8C9F35 /* Pods-Example-iOS-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS-ObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-iOS-ObjC/Pods-Example-iOS-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		62E934478D0B390D6D4EB413 /* Pods-Example-iOS-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS-ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-iOS-ObjC/Pods-Example-iOS-ObjC.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1865A1DA1F39FA9C00A43763 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B59721FF6E4A90552D7747C /* libPods-Example-iOS-ObjC.a in Frameworks */,
+				185956B31F58600600616BD9 /* libBTSerial.a in Frameworks */,
+				185956B41F58600600616BD9 /* libPlugPag.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1865A1D41F39FA9C00A43763 = {
+			isa = PBXGroup;
+			children = (
+				1865A1DF1F39FA9C00A43763 /* Example-iOS-ObjC */,
+				1865A1DE1F39FA9C00A43763 /* Products */,
+				1865A1FC1F3A00C600A43763 /* Frameworks */,
+				858865389C6CE4A3FCAE5BC9 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		1865A1DE1F39FA9C00A43763 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1865A1DD1F39FA9C00A43763 /* Example-iOS-ObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1865A1DF1F39FA9C00A43763 /* Example-iOS-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				18E73E451F4219AF001682C1 /* Utils */,
+				1865A2011F3A227900A43763 /* controllers */,
+				1865A1FF1F3A00D400A43763 /* PlugPag */,
+				1865A1E31F39FA9C00A43763 /* AppDelegate.h */,
+				1865A1E41F39FA9C00A43763 /* AppDelegate.m */,
+				1865A1E91F39FA9C00A43763 /* Main.storyboard */,
+				1865A1EC1F39FA9C00A43763 /* Assets.xcassets */,
+				1865A1EE1F39FA9C00A43763 /* LaunchScreen.storyboard */,
+				1865A1F11F39FA9C00A43763 /* Info.plist */,
+				1865A1E01F39FA9C00A43763 /* Supporting Files */,
+			);
+			path = "Example-iOS-ObjC";
+			sourceTree = "<group>";
+		};
+		1865A1E01F39FA9C00A43763 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1865A1E11F39FA9C00A43763 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1865A1FC1F3A00C600A43763 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				185956B11F58600600616BD9 /* libBTSerial.a */,
+				185956B21F58600600616BD9 /* libPlugPag.a */,
+				49AFB5269B37851BB9EE0135 /* libPods-Example-iOS-ObjC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1865A1FF1F3A00D400A43763 /* PlugPag */ = {
+			isa = PBXGroup;
+			children = (
+				1865A2001F3A00E900A43763 /* PlugPag.h */,
+			);
+			name = PlugPag;
+			sourceTree = "<group>";
+		};
+		1865A2011F3A227900A43763 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1865A1E61F39FA9C00A43763 /* PP_MenuListController.h */,
+				1865A1E71F39FA9C00A43763 /* PP_MenuListController.m */,
+				1865A2021F3A230800A43763 /* PP_ChooseViewController.h */,
+				1865A2031F3A230800A43763 /* PP_ChooseViewController.m */,
+				1861761B1F3BB6B4008DE3E7 /* PP_PeripheralListController.h */,
+				1861761C1F3BB6B4008DE3E7 /* PP_PeripheralListController.m */,
+				18E73E4B1F421CA0001682C1 /* GetLastApprovedTransactionController.h */,
+				18E73E4C1F421CA0001682C1 /* GetLastApprovedTransactionController.m */,
+				18E73E4E1F422252001682C1 /* CancelTransactionController.h */,
+				18E73E4F1F422252001682C1 /* CancelTransactionController.m */,
+				18E73E511F4228D8001682C1 /* SimplePaymentTransactionController.h */,
+				18E73E521F4228D8001682C1 /* SimplePaymentTransactionController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		18E73E451F4219AF001682C1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				18E73E461F4219D0001682C1 /* UIUtils.h */,
+				18E73E471F4219D0001682C1 /* UIUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		858865389C6CE4A3FCAE5BC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56EA8BC4D5B8D3599F8C9F35 /* Pods-Example-iOS-ObjC.debug.xcconfig */,
+				62E934478D0B390D6D4EB413 /* Pods-Example-iOS-ObjC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1865A1DC1F39FA9C00A43763 /* Example-iOS-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1865A1F41F39FA9C00A43763 /* Build configuration list for PBXNativeTarget "Example-iOS-ObjC" */;
+			buildPhases = (
+				7A9A462514AD9FB8BDA53749 /* [CP] Check Pods Manifest.lock */,
+				1865A1D91F39FA9C00A43763 /* Sources */,
+				1865A1DA1F39FA9C00A43763 /* Frameworks */,
+				1865A1DB1F39FA9C00A43763 /* Resources */,
+				C22359BAC1DB3F19F5869927 /* [CP] Embed Pods Frameworks */,
+				F60F28C7E942C0D660D37A81 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Example-iOS-ObjC";
+			productName = "Example-iOS-ObjC";
+			productReference = 1865A1DD1F39FA9C00A43763 /* Example-iOS-ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1865A1D51F39FA9C00A43763 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "UOL Pagseguro";
+				TargetAttributes = {
+					1865A1DC1F39FA9C00A43763 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1865A1D81F39FA9C00A43763 /* Build configuration list for PBXProject "Example-iOS-ObjC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1865A1D41F39FA9C00A43763;
+			productRefGroup = 1865A1DE1F39FA9C00A43763 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1865A1DC1F39FA9C00A43763 /* Example-iOS-ObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1865A1DB1F39FA9C00A43763 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1865A1F01F39FA9C00A43763 /* LaunchScreen.storyboard in Resources */,
+				1865A1ED1F39FA9C00A43763 /* Assets.xcassets in Resources */,
+				1865A1EB1F39FA9C00A43763 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7A9A462514AD9FB8BDA53749 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C22359BAC1DB3F19F5869927 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-iOS-ObjC/Pods-Example-iOS-ObjC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F60F28C7E942C0D660D37A81 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-iOS-ObjC/Pods-Example-iOS-ObjC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1865A1D91F39FA9C00A43763 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E73E531F4228D8001682C1 /* SimplePaymentTransactionController.m in Sources */,
+				18E73E501F422252001682C1 /* CancelTransactionController.m in Sources */,
+				1865A1E81F39FA9C00A43763 /* PP_MenuListController.m in Sources */,
+				1865A1E51F39FA9C00A43763 /* AppDelegate.m in Sources */,
+				1861761D1F3BB6B4008DE3E7 /* PP_PeripheralListController.m in Sources */,
+				18E73E4D1F421CA0001682C1 /* GetLastApprovedTransactionController.m in Sources */,
+				1865A1E21F39FA9C00A43763 /* main.m in Sources */,
+				1865A2041F3A230800A43763 /* PP_ChooseViewController.m in Sources */,
+				18E73E481F4219D0001682C1 /* UIUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1865A1E91F39FA9C00A43763 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1865A1EA1F39FA9C00A43763 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1865A1EE1F39FA9C00A43763 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1865A1EF1F39FA9C00A43763 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1865A1F21F39FA9C00A43763 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1865A1F31F39FA9C00A43763 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1865A1F51F39FA9C00A43763 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56EA8BC4D5B8D3599F8C9F35 /* Pods-Example-iOS-ObjC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "Example-iOS-ObjC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Example-iOS-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uol.pagseguro.Example-iOS-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		1865A1F61F39FA9C00A43763 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62E934478D0B390D6D4EB413 /* Pods-Example-iOS-ObjC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "Example-iOS-ObjC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Example-iOS-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uol.pagseguro.Example-iOS-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1865A1D81F39FA9C00A43763 /* Build configuration list for PBXProject "Example-iOS-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1865A1F21F39FA9C00A43763 /* Debug */,
+				1865A1F31F39FA9C00A43763 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1865A1F41F39FA9C00A43763 /* Build configuration list for PBXNativeTarget "Example-iOS-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1865A1F51F39FA9C00A43763 /* Debug */,
+				1865A1F61F39FA9C00A43763 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1865A1D51F39FA9C00A43763 /* Project object */;
+}
