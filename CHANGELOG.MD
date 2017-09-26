@@ -1,6 +1,6 @@
-### 1.3.0
+### 1.3.0 - 22/11/2017
 - Modificado funcionamento do método GetLastAprovedTransactionStatus() para esperar finalização da transação corrente
-- Mensgens no campo message (getMessage()) agora mais específicas em caso de transação negada
+- Mensagens no campo message (getMessage()) agora mais específicas em caso de transação negada
 
 ### 1.2.0 - 19/09/2017
 - Release PlugPag para iOS
