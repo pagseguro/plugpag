@@ -1,4 +1,4 @@
-### 1.3.0 - 22/11/2017
+### 1.3.0 - 22/09/2017
 - Modificado funcionamento do método GetLastAprovedTransactionStatus() para esperar finalização da transação corrente
 - Mensagens no campo message (getMessage()) agora mais específicas em caso de transação negada
 
