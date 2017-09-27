@@ -201,6 +201,7 @@
 				TargetAttributes = {
 					1865A1DC1F39FA9C00A43763 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = VC4W292XYC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -348,6 +349,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -397,6 +399,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -420,7 +423,7 @@
 			baseConfigurationReference = 56EA8BC4D5B8D3599F8C9F35 /* Pods-Example-iOS-ObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VC4W292XYC;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Example-iOS-ObjC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
@@ -440,7 +443,7 @@
 			baseConfigurationReference = 62E934478D0B390D6D4EB413 /* Pods-Example-iOS-ObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VC4W292XYC;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Example-iOS-ObjC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
