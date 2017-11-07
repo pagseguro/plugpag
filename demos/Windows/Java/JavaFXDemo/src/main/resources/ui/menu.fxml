@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox alignment="CENTER" prefHeight="0.0" prefWidth="0.0" spacing="20" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.uol.pagseguro.plugpag.menu.MenuController">
+    <children>
+        <Button fx:id="mBtnPay" focusTraversable="true" mnemonicParsing="false" onAction="#onPayClick">
+            <graphic>
+                <ImageView fitHeight="150.0" fitWidth="150.0" preserveRatio="true">
+                    <Image url="images/menu_payment.png" />
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="mBtnCancelPayment" focusTraversable="true" mnemonicParsing="false" onAction="#onCancelPaymentClick">
+            <graphic>
+                <ImageView fitHeight="150.0" fitWidth="150.0" preserveRatio="true">
+                    <Image url="images/menu_cancel_payment.png" />
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="mBtnQueryLastSuccessfulTransaction" focusTraversable="true" mnemonicParsing="false" onAction="#onQueryLastTransactionClick">
+            <graphic>
+                <ImageView fitHeight="150.0" fitWidth="150.0" preserveRatio="true">
+                    <Image url="images/menu_transaction_info.png" />
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+    </padding>
+</HBox>

@@ -1,0 +1,48 @@
+buildscript {
+    dependencies {
+        classpath group: 'de.dynamicfiles.projects.gradle.plugins', name: 'javafx-gradle-plugin', version: '8.8.2'
+    }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+
+    }
+}
+
+group 'br.com.uol.pagseguro.plugpag'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'javafx-gradle-plugin'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+
+    maven { url 'https://github.com/pagseguromaster/plugpag/raw/master/android' }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile fileTree(dir: 'lib', include: '*.jar')
+    compile 'br.uol.pagseguro.client:btserial:1.3.0'
+    compile 'br.uol.pagseguro.client:plugpag:1.3.0'
+}
+
+jfx {
+    // minimal requirement for jfxJar-task
+    mainClass = 'br.com.uol.pagseguro.plugpag.main.MainApp'
+
+    // minimal requirement for jfxNative-task
+    vendor = 'PagSeguro'
+
+//    runJavaParameter += "-Djava.library.path=lib"
+//    runJavaParameter += "-Djava.library.path=resource/lib"
+//
+//    jvmProperties = [
+//            'java.library.path': 'lib;resource/lib'
+//    ]
+//
+//    additionalAppResources = "lib"
+}
