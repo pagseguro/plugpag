@@ -34,9 +34,9 @@
 #define ERROR_DEVICE_NULL               ERR_BASE-1023
 #define SHARE_MODE_NOT_ALLOWED          ERR_BASE-20
 
-#define BT_PEAR_STATE_PROCESSING        2
-#define BT_PEAR_STATE_OK                1
-#define BT_PEAR_STATE_FAIL              0
+#define BT_PAIR_STATE_PROCESSING        2
+#define BT_PAIR_STATE_OK                1
+#define BT_PAIR_STATE_FAIL              0
 
 #define S920      @"S920"
 #define D200W     @"D200W"
@@ -64,6 +64,7 @@
 - (int) GetPairPeripheralStatus;
 
 -(NSArray *) GetListPeripheral;
+
 -(NSArray *) GetListPeripheral:(NSString *) model;
 
 -(NSArray *) GetListModels;

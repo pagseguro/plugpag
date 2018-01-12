@@ -87,18 +87,18 @@
     int ret = [[PlugPag sharedInstance] GetPairPeripheralStatus];
     
     switch (ret) {
-        case BT_PEAR_STATE_PROCESSING:
+        case BT_PAIR_STATE_PROCESSING:
             [self performSelector:@selector(pairPeripheralStatus) withObject:nil afterDelay:1.5];
             [UIUtils showProgress];
             break;
         
-        case BT_PEAR_STATE_OK:
+        case BT_PAIR_STATE_OK:
             [UIUtils hideProgress];
             [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(pairPeripheralStatus) object:nil];
             [UIUtils showAlert:self withMessage: [NSString stringWithFormat:@"Pair Ok"]];
             break;
             
-        case BT_PEAR_STATE_FAIL:
+        case BT_PAIR_STATE_FAIL:
             [UIUtils hideProgress];
             [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(pairPeripheralStatus) object:nil];
             [UIUtils showAlert:self withMessage: [NSString stringWithFormat:@"Pair Failed"]];

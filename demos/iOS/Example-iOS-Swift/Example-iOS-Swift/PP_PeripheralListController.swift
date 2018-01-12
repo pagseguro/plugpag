@@ -73,17 +73,17 @@ class PP_PeripheralListController: UITableViewController {
         let ret = PlugPag.sharedInstance().getPairPeripheralStatus();
     
         switch ret {
-            case BT_PEAR_STATE_PROCESSING:
+            case BT_PAIR_STATE_PROCESSING:
                 UIUtils.showProgress()
                 Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(PP_PeripheralListController.pairPeripheralStatus), userInfo: nil, repeats: false)
                 break
         
-            case BT_PEAR_STATE_OK:
+            case BT_PAIR_STATE_OK:
                 UIUtils.hideProgress()
                 UIUtils.showAlert(view: self, message: "Pair Ok")
                 break
         
-            case BT_PEAR_STATE_FAIL:
+            case BT_PAIR_STATE_FAIL:
                 UIUtils.hideProgress()
                 UIUtils.showAlert(view: self, message: "Pair Failed")
                 break
