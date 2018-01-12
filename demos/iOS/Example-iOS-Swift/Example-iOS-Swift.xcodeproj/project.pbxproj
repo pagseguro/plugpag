@@ -13,7 +13,6 @@
 		1866D0EE1F4DCDBB003719E4 /* CancelTransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866D0ED1F4DCDBB003719E4 /* CancelTransactionController.swift */; };
 		1866D0F01F4DCDD2003719E4 /* SimplePaymentTransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866D0EF1F4DCDD2003719E4 /* SimplePaymentTransactionController.swift */; };
 		187AD3DA1F4CD34E0079BDA5 /* libPlugPag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187AD3D81F4CD34E0079BDA5 /* libPlugPag.a */; };
-		187AD3DB1F4CD34E0079BDA5 /* libBTSerial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187AD3D91F4CD34E0079BDA5 /* libBTSerial.a */; };
 		187AD3E21F4CD8350079BDA5 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187AD3E11F4CD8350079BDA5 /* UIUtils.swift */; };
 		18BDA95D1F4CD25B00A2561F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDA95C1F4CD25B00A2561F /* AppDelegate.swift */; };
 		18BDA95F1F4CD25B00A2561F /* PP_MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDA95E1F4CD25B00A2561F /* PP_MenuListController.swift */; };
@@ -52,7 +51,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				187AD3DA1F4CD34E0079BDA5 /* libPlugPag.a in Frameworks */,
-				187AD3DB1F4CD34E0079BDA5 /* libBTSerial.a in Frameworks */,
 				DB446770E2C9106A4CF28379 /* libPods-Example-iOS-Swift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,13 +219,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-iOS-Swift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7FBA9FE4C8826A71B1FD5A2B /* [CP] Copy Pods Resources */ = {
@@ -236,9 +237,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example-iOS-Swift/Pods-Example-iOS-Swift-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

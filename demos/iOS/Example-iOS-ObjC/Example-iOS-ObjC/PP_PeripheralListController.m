@@ -62,8 +62,7 @@
     NSString *deviceChosen = [devices objectAtIndex:indexPath.row];
     
     [[PlugPag sharedInstance] SetPeripheralName:deviceChosen];
-    
-    [UIUtils showAlert:self withMessage: [NSString stringWithFormat:@"Selecionado: %@", deviceChosen]];
+    [self pairPeripheralStatus];
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -81,6 +80,36 @@
     [self.tableView reloadData];
     
     [UIUtils hideProgress];
+}
+
+- (void) pairPeripheralStatus {
+    
+    int ret = [[PlugPag sharedInstance] GetPairPeripheralStatus];
+    
+    switch (ret) {
+        case BT_PEAR_STATE_PROCESSING:
+            [self performSelector:@selector(pairPeripheralStatus) withObject:nil afterDelay:1.5];
+            [UIUtils showProgress];
+            break;
+        
+        case BT_PEAR_STATE_OK:
+            [UIUtils hideProgress];
+            [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(pairPeripheralStatus) object:nil];
+            [UIUtils showAlert:self withMessage: [NSString stringWithFormat:@"Pair Ok"]];
+            break;
+            
+        case BT_PEAR_STATE_FAIL:
+            [UIUtils hideProgress];
+            [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(pairPeripheralStatus) object:nil];
+            [UIUtils showAlert:self withMessage: [NSString stringWithFormat:@"Pair Failed"]];
+            
+            break;
+            
+        default:
+            [UIUtils hideProgress];
+            break;
+    }
+    
 }
 
 @end

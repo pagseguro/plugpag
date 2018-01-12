@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #define RET_OK                          0
 #define ERR_BASE                        -1000
@@ -33,11 +34,16 @@
 #define ERROR_DEVICE_NULL               ERR_BASE-1023
 #define SHARE_MODE_NOT_ALLOWED          ERR_BASE-20
 
+#define BT_PEAR_STATE_PROCESSING        2
+#define BT_PEAR_STATE_OK                1
+#define BT_PEAR_STATE_FAIL              0
+
 #define S920      @"S920"
-#define D200      @"D200"
+#define D200W     @"D200W"
 
 #define CREDIT                          1
 #define DEBIT                           2
+#define VOUCHER                         3
 
 #define A_VISTA                         1
 #define PARC_VENDEDOR                   2
@@ -54,6 +60,8 @@
 -(void) SetPeripheralName: (NSString *) name;
 
 -(void) SetPeripheral: (NSString *) model withName: (NSString *) name;
+
+- (int) GetPairPeripheralStatus;
 
 -(NSArray *) GetListPeripheral;
 -(NSArray *) GetListPeripheral:(NSString *) model;
@@ -72,9 +80,9 @@
 
 -(int) SimplePaymentTransaction:(int) paymentMethod
             withInstallmentType:(int) installmentType
-               andInstallments:(int) installments
-                     andAmount:(NSString *) amount
-              andUserReference:(NSString *) userReference;
+                andInstallments:(int) installments
+                      andAmount:(NSString *) amount
+               andUserReference:(NSString *) userReference;
 
 -(int) CancelTransaction;
 

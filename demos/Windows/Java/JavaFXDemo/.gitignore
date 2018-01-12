@@ -1,0 +1,14 @@
+*.class
+*.bkp
+*.backup
+*.o
+*.tmp
+*.temp
+*.iml
+
+.idea/
+.gradle/
+build/
+out/
+temp/
+tmp/

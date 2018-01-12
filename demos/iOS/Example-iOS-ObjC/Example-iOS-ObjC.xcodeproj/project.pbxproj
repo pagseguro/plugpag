@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		185956B31F58600600616BD9 /* libBTSerial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 185956B11F58600600616BD9 /* libBTSerial.a */; };
 		185956B41F58600600616BD9 /* libPlugPag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 185956B21F58600600616BD9 /* libPlugPag.a */; };
 		1861761D1F3BB6B4008DE3E7 /* PP_PeripheralListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861761C1F3BB6B4008DE3E7 /* PP_PeripheralListController.m */; };
 		1865A1E21F39FA9C00A43763 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865A1E11F39FA9C00A43763 /* main.m */; };
@@ -61,7 +60,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B59721FF6E4A90552D7747C /* libPods-Example-iOS-ObjC.a in Frameworks */,
-				185956B31F58600600616BD9 /* libBTSerial.a in Frameworks */,
 				185956B41F58600600616BD9 /* libPlugPag.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,13 +242,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-iOS-ObjC-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C22359BAC1DB3F19F5869927 /* [CP] Embed Pods Frameworks */ = {
@@ -274,9 +275,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example-iOS-ObjC/Pods-Example-iOS-ObjC-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
