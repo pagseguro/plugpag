@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context="br.com.uol.pagseguro.plugpag.pagcafe.activity.MenuActivity">
+
+    <Button
+        android:id="@+id/btnSale"
+        style="@style/ButtonStyle"
+        android:text="@string/menu_sale" />
+
+    <Button
+        android:id="@+id/btnCancelSale"
+        style="@style/ButtonStyle"
+        android:text="@string/menu_sale_reversal" />
+
+    <Button
+        android:id="@+id/btnQueryLastSale"
+        style="@style/ButtonStyle"
+        android:text="@string/menu_query_last_sale" />
+
+    <Button
+        android:id="@+id/btnAbout"
+        style="@style/ButtonStyle"
+        android:text="@string/menu_about" />
+
+</LinearLayout>

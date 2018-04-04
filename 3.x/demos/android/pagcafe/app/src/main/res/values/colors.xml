@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Green theme -->
+    <color name="colorPrimary">#1EC390</color>
+    <color name="colorPrimaryDark">#18966E</color>
+    <color name="colorAccent">#5BC1A1</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="colorPrimaryDarkDisabled">#551EC390</color>
+
+    <color name="colorPrimaryGreen">#1EC390</color>
+    <color name="colorPrimaryDarkGreen">#18966E</color>
+    <color name="textColorPrimaryGreen">#000000</color>
+    <color name="colorPrimaryDarkGreenDisabled">#551EC390</color>
+
+    <color name="colorPrimaryRed">#D82E22</color>
+    <color name="colorPrimaryDarkRed">#A22418</color>
+    <color name="textColorPrimaryRed">#FFFFFF</color>
+    <color name="colorPrimaryDarkRedDisabled">#55A22418</color>
+
+    <color name="footerBackground">#44A22418</color>
+
+    <color name="button_background_default">#22FFFFFF</color>
+    <color name="button_background_pressed">#66FFFFFF</color>
+</resources>

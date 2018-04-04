@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout style="@style/AppWrapper">
+
+        <!-- ################################################################################### -->
+        <!-- Permissions -->
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/SectionLabel"
+            android:text="@string/txt_section_permissions" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_permissions"
+            style="@style/ActionButton"
+            android:text="@string/btn_permissions"/>
+
+        <View style="@style/SectionSpacer" />
+
+        <!-- ################################################################################### -->
+        <!-- Authentication -->
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/SectionLabel"
+            android:text="@string/txt_section_authentication" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_authentication_check"
+            style="@style/ActionButton"
+            android:text="@string/btn_authentication_check"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_authentication_request"
+            style="@style/ActionButton"
+            android:text="@string/btn_authentication_request"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_authentication_invalidate"
+            style="@style/ActionButton"
+            android:text="@string/btn_authentication_invalidate"/>
+
+        <View style="@style/SectionSpacer" />
+
+        <!-- ################################################################################### -->
+        <!-- Terminals -->
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/SectionLabel"
+            android:text="@string/txt_section_terminals" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_terminal_credit"
+            style="@style/ActionButton"
+            android:text="@string/btn_terminal_credit"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_terminal_credit_with_installments"
+            style="@style/ActionButton"
+            android:text="@string/btn_terminal_credit_with_installments"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_terminal_debit"
+            style="@style/ActionButton"
+            android:text="@string/btn_terminal_debit"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_terminal_voucher"
+            style="@style/ActionButton"
+            android:text="@string/btn_terminal_voucher"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_terminal_void_payment"
+            style="@style/ActionButton"
+            android:text="@string/btn_terminal_void_payment"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_terminal_query"
+            style="@style/ActionButton"
+            android:text="@string/btn_terminal_query"/>
+
+        <View style="@style/SectionSpacer" />
+
+        <!-- ################################################################################### -->
+        <!-- Pinpads -->
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/SectionLabel"
+            android:text="@string/txt_section_pinpads" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_pinpad_credit"
+            style="@style/ActionButton"
+            android:text="@string/btn_pinpad_credit"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_pinpad_credit_with_installments"
+            style="@style/ActionButton"
+            android:text="@string/btn_pinpad_credit_with_installments"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_pinpad_debit"
+            style="@style/ActionButton"
+            android:text="@string/btn_pinpad_debit"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_pinpad_voucher"
+            style="@style/ActionButton"
+            android:text="@string/btn_pinpad_voucher"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_pinpad_void_payment"
+            style="@style/ActionButton"
+            android:text="@string/btn_pinpad_void_payment"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

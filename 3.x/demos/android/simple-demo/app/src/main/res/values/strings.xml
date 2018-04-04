@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">PlugPag Android Demo</string>
+
+    <string name="plugpag_app_identification">PlugPagDemo</string>
+    <string name="plugpag_app_version">0.0</string>
+    <string name="plugpag_user_reference">CODVENDA</string>
+
+    <string name="txt_section_permissions">Permissões</string>
+    <string name="txt_section_authentication">Autenticação</string>
+    <string name="txt_section_terminals">Terminais</string>
+    <string name="txt_section_pinpads">Leitores</string>
+
+    <string name="btn_permissions">Solicitar/Verificar permissões</string>
+
+    <string name="btn_authentication_check">Verificar autenticação</string>
+    <string name="btn_authentication_request">Solicitar autenticação</string>
+    <string name="btn_authentication_invalidate">Invalidar autenticação</string>
+
+    <string name="btn_terminal_credit">Crédito à vista</string>
+    <string name="btn_terminal_credit_with_installments">Crédito parcelado</string>
+    <string name="btn_terminal_debit">Débito</string>
+    <string name="btn_terminal_voucher">Voucher</string>
+    <string name="btn_terminal_void_payment">Estorno</string>
+    <string name="btn_terminal_query">Consulta</string>
+
+    <string name="btn_pinpad_credit">Crédito à vista</string>
+    <string name="btn_pinpad_credit_with_installments">Crédito parcelado</string>
+    <string name="btn_pinpad_debit">Débito</string>
+    <string name="btn_pinpad_voucher">Voucher</string>
+    <string name="btn_pinpad_void_payment">Estorno</string>
+
+    <string name="title_error">Erro</string>
+
+    <string name="msg_error_unexpected">Erro inesperado</string>
+    <string name="msg_error_missing_transaction_data">Sem dados para estorno</string>
+
+    <string name="msg_wait">Aguarde</string>
+    <string name="msg_all_permissions_granted">Todas permissões concedidas</string>
+    <string name="msg_authentication_ok">Usuário autenticado</string>
+    <string name="msg_authentication_missing">Usuário NÃO autenticado</string>
+    <string name="msg_authentication_failed">Erro na autenticação</string>
+    <string name="msg_payment_info">Tipo: %s\nValor: R$ %.2f\nParcelamento: %dx\n==========\n%s</string>
+    <string name="msg_void_payment_info">Estorno\n==========\n%s</string>
+
+    <string name="msg_result_result">Resultado: %d</string>
+    <string name="msg_result_error_code">Código de erro: %s</string>
+    <string name="msg_result_amount">Valor: R$ %s</string>
+    <string name="msg_result_available_balance">Valor disponível: R$: %s</string>
+    <string name="msg_result_bin">BIN: %s</string>
+    <string name="msg_result_card_brand">Bandeira: %s</string>
+    <string name="msg_result_date">Data: %s</string>
+    <string name="msg_result_time">Hora: %s</string>
+    <string name="msg_result_holder">Titular: %s</string>
+    <string name="msg_result_host_nsu">Host NSU: %s</string>
+    <string name="msg_result_message">Mensagem: %s</string>
+    <string name="msg_result_serial_number">Número de série: %s</string>
+    <string name="msg_result_transaction_code">Código da transação: %s</string>
+    <string name="msg_result_transaction_id">ID da transação: %s</string>
+    <string name="msg_result_user_reference">Código de venda: %s</string>
+
+    <string name="type_credit">Crédito</string>
+    <string name="type_debit">Débito</string>
+    <string name="type_voucher">Voucher</string>
+</resources>

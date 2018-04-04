@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_alignParentBottom="true"
+        style="@style/ButtonStyle"
+        android:text="@string/ok"/>
+
+    <LinearLayout
+        android:layout_above="@id/btnOk"
+        android:id="@+id/container_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="top|left"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtMessage"
+            style="@style/TextLabel"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="15dp"
+            android:background="#55FFFFFF"
+            android:gravity="center"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            style="@style/Row">
+
+            <TextView
+                style="@style/TextLabel"
+                android:text="@string/transactionCode"/>
+
+            <TextView
+                android:id="@+id/txtTransactionCode"
+                style="@style/TextContent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Row">
+
+            <TextView
+                style="@style/TextLabel"
+                android:text="@string/date"/>
+
+            <TextView
+                android:id="@+id/txtDate"
+                style="@style/TextContent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Row">
+
+            <TextView
+                style="@style/TextLabel"
+                android:text="@string/time"/>
+
+            <TextView
+                android:id="@+id/txtTime"
+                style="@style/TextContent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Row">
+
+            <TextView
+                style="@style/TextLabel"
+                android:text="@string/hostNsu"/>
+
+            <TextView
+                android:id="@+id/txtHostNsu"
+                style="@style/TextContent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Row">
+
+            <TextView
+                style="@style/TextLabel"
+                android:text="@string/cardBrand"/>
+
+            <TextView
+                android:id="@+id/txtCardBrand"
+                style="@style/TextContent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Row">
+
+            <TextView
+                style="@style/TextLabel"
+                android:text="@string/bin"/>
+
+            <TextView
+                android:id="@+id/txtBin"
+                style="@style/TextContent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Row">
+
+            <TextView
+                style="@style/TextLabel"
+                android:text="@string/holder"/>
+
+            <TextView
+                android:id="@+id/txtHolder"
+                style="@style/TextContent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Row">
+
+            <TextView
+                style="@style/TextLabel"
+                android:text="@string/userReference"/>
+
+            <TextView
+                android:id="@+id/txtUserReference"
+                style="@style/TextContent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Row">
+
+            <TextView
+                style="@style/TextLabel"
+                android:text="@string/terminalSerialNumber"/>
+
+            <TextView
+                android:id="@+id/txtSerialNumber"
+                style="@style/TextContent"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_above="@id/btnOk"
+        android:id="@+id/container_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/txtErrorCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtErrorDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_throbber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"/>
+
+        <TextView
+            android:id="@+id/txtThrobberMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

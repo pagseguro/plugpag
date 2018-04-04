@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">PagCafe</string>
+
+    <string name="toolbar_title">PagCafé</string>
+    <string name="toolbar_item_void_payment">Estornar pagamento</string>
+    <string name="toolbar_item_query_last_approved_transaction">Consultar última transação aprovada</string>
+    <string name="toolbar_item_authenticate">Autenticar</string>
+    <string name="toolbar_item_bluetooth">Bluetooth</string>
+
+    <string name="bluetooth_devices">Aparelhos bluetooth</string>
+    <string name="searching_bluetooth">Procurando aparelhos bluetooth</string>
+
+    <string name="footer_bluetooth">Bluetooth:</string>
+    <string name="footer_plugpag_version">PlugPag:</string>
+    <string name="footer_network">Rede:</string>
+
+    <string name="title_wait">Aguarde</string>
+    <string name="title_success">Sucesso</string>
+    <string name="title_error">Erro</string>
+    <string name="title_waiting_for_payment">Aguardando pagamento</string>
+    <string name="title_waiting_for_void_payment">Aguardando estorno</string>
+
+    <string name="msg_back_pressed_warning">Pressione Voltar duas vezes para sair</string>
+    <string name="msg_no_bluetooth_device_selected_warning">Selecione um terminal/leitor</string>
+    <string name="msg_starting_payment">Iniciando pagamento</string>
+    <string name="msg_waiting_for_payment">Aguardando pagamento</string>
+    <string name="msg_wait">Aguarde</string>
+    <string name="msg_processing">Processando</string>
+    <string name="msg_transaction_error">Código: %1$d\nError code: %2$s\nMensagem: %3$s</string>
+    <string name="msg_void_transaction_missing_data">Dados insuficientes para iniciar estorno</string>
+    <string name="msg_query_last_approved_transaction">Não foi possível obter dados da última transação aprovada</string>
+    <string name="msg_missing_result">Erro ao obter o resultado da transação</string>
+    <string name="msg_missing_authentication">Usuário não autenticado</string>
+    <string name="msg_aborting">Abortando</string>
+    <string name="msg_authentication_successful">Autenticação concluída com sucesso</string>
+    <string name="msg_authentication_failed">Autenticação falhou</string>
+    <string name="msg_missing_permissions">Aplicativo sem permissão para fazer autenticação</string>
+
+    <string name="dashboard_button_simple_payment">Pagamento simples</string>
+    <string name="dashboard_button_coffee_payment">Pagamento de café</string>
+    <string name="dashboard_button_void_payment">Estorno</string>
+    <string name="dashboard_button_query_last_successful_transaction">Consulta</string>
+
+    <string name="under_construction">Em construção</string>
+
+    <string name="coffee_button_less">-</string>
+    <string name="coffee_button_more">+</string>
+    <string name="coffee_button_pay">Pagar</string>
+    <string name="coffee_button_select_bluetooth_device">Selecione um terminal/pinpad</string>
+
+    <string name="credit">Crédito</string>
+    <string name="debit">Débito</string>
+    <string name="voucher">Voucher</string>
+
+    <string name="installments">Parcelas</string>
+
+    <string name="transaction_result_label_result">Resultado:</string>
+    <string name="transaction_result_label_transaction_code">Transaction code:</string>
+    <string name="transaction_result_label_date">Date:</string>
+    <string name="transaction_result_label_time">Time:</string>
+    <string name="transaction_result_label_host_nsu">Host NSU:</string>
+    <string name="transaction_result_label_card_brand">Card brand:</string>
+    <string name="transaction_result_label_bin">Bin:</string>
+    <string name="transaction_result_label_holder">Holder:</string>
+    <string name="transaction_result_label_user_reference">User reference:</string>
+    <string name="transaction_result_label_serial_number">Serial number:</string>
+    <string name="transaction_result_label_transaction_id">Transaction ID:</string>
+    <string name="transaction_result_label_amount">Valor:</string>
+    <string name="transaction_result_label_available_balance">Saldo:</string>
+
+    <string name="void_transaction_date">Data: %s</string>
+    <string name="void_transaction_void_payment">Estornar</string>
+    <string name="void_transaction_no_transactions">Nenhuma transação encontrada</string>
+
+    <string name="button_abort">Abortar</string>
+    <string name="button_aborting">Abortando</string>
+
+    <string name="button_plus">+</string>
+    <string name="button_minus">-</string>
+    <string name="button_pay">PAGAR</string>
+
+    <string name="menu_sale">Fazer uma venda</string>
+    <string name="menu_sale_reversal">Fazer estorno</string>
+    <string name="menu_query_last_sale">Consultar última venda</string>
+    <string name="menu_about">Sobre</string>
+
+    <string name="ok">OK</string>
+
+    <string name="transactionCode">Transaction Code:</string>
+    <string name="date">Date:</string>
+    <string name="time">Time:</string>
+    <string name="hostNsu">Host NSU:</string>
+    <string name="cardBrand">Card Brand:</string>
+    <string name="bin">Bin:</string>
+    <string name="holder">Holder:</string>
+    <string name="userReference">User Reference:</string>
+    <string name="terminalSerialNumber">Serial Number:</string>
+</resources>

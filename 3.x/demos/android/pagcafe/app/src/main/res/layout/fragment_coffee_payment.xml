@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_coffee_input_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:gravity="right"
+            android:textSize="20sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/txt_coffee_total_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="right"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btn_less_coffee"
+                style="@style/SingleCharacterButton"
+                android:layout_alignParentLeft="true"
+                android:text="@string/coffee_button_less"/>
+
+            <Button
+                android:id="@+id/btn_more_coffee"
+                style="@style/SingleCharacterButton"
+                android:layout_alignParentRight="true"
+                android:text="@string/coffee_button_more"/>
+
+            <SeekBar
+                android:id="@+id/bar_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/btn_more_coffee"
+                android:layout_toRightOf="@id/btn_less_coffee"
+                android:progressDrawable="@android:color/transparent"
+                android:theme="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:thumb="@drawable/ic_coffee_bean"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_credit"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/credit"/>
+
+            <Button
+                android:id="@+id/btn_debit"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/debit"/>
+
+            <Button
+                android:id="@+id/btn_voucher"
+                style="@style/Button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/voucher"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_pay"
+            style="@style/GreenButton"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:text="@string/coffee_button_pay"/>
+
+        <RelativeLayout
+            android:id="@+id/containerInstalments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_label_installments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="@string/installments"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btn_less_installment"
+                style="@style/SingleCharacterButton"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/txt_label_installments"
+                android:text="@string/coffee_button_less"/>
+
+            <Button
+                android:id="@+id/btn_more_installment"
+                style="@style/SingleCharacterButton"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/txt_label_installments"
+                android:text="@string/coffee_button_more"/>
+
+            <TextView
+                android:id="@+id/txt_installments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_label_installments"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/btn_more_installment"
+                android:layout_toRightOf="@id/btn_less_installment"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="30sp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

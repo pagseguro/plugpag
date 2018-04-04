@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/toolbar_action_void_payment"
+        android:icon="@drawable/ic_money_off_black_48dp"
+        android:title="@string/toolbar_item_void_payment"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/toolbar_action_query_last_approved_transaction"
+        android:icon="@drawable/ic_find_in_page_black_48dp"
+        android:title="@string/toolbar_item_query_last_approved_transaction"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/toolbar_action_authenticate"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="@string/toolbar_item_authenticate"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/toolbar_action_bluetooth_list"
+        android:icon="@drawable/ic_bluetooth_black_48dp"
+        android:title="@string/toolbar_item_bluetooth"
+        app:showAsAction="ifRoom" />
+
+</menu>
