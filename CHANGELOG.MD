@@ -1,5 +1,14 @@
 # PlugPag 3.0
 
+## 3.0.0 - 05/04/2018
+- [iOS] Versão inicial
+- Novos documentos
+    - [[Geral] v1.0.0 | Visão geral do PlugPag 3.x](./3.x/documentos/Manual%20de%20Integração%20-%20Visão%20Geral.pdf)
+- Novos manuais
+    - [[iOS] v1.0.0 | Manual de integração](./3.x/documentos/Manual%20de%20Integração%20-%20iOS.pdf)
+
+
+
 ## 3.0.0 - 28/03/2018
 - [Android] Versão inicial
 - Novos documentos
@@ -28,7 +37,7 @@
 # PlugPag 1.1
 
 ## 1.1.1 - 25/08/2017
-- Adicionado procedimento para tratamento dos erros -1003 e -2033. 
+- Adicionado procedimento para tratamento dos erros -1003 e -2033.
 
 ## 1.1.0 - 24/07/2017
 - Adicionado comandos getSerial() e SetVersionName()
