@@ -39,6 +39,11 @@ public class TransactionData {
                 result.getTransactionId(),
                 result.getAmount(),
                 result.getAvailableBalance(),
+                result.getCardApplication(),
+                result.getCardCryptogram(),
+                result.getLabel(),
+                result.getHolder(),
+                result.getExtendedHolderName(),
                 result.getResult());
     }
 
