@@ -1,7 +1,7 @@
 # PlugPag 3.0
 
 ## 3.0.1 - 15/04/2018
-- [Android] Mais dados no resultao das transações
+- [Android] Mais dados no resultado das transações
 - [Android] Pagamento por voucher
 - [Android] Correção de valores de parcelamento
 - [[Android] Manual de integração](./3.x/documentos/Manual%20de%20Integração%20-%20Android.pdf)
