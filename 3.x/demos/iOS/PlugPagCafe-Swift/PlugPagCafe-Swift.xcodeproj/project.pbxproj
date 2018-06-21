@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		185C8BB22046EF5000938506 /* PlugPagCafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C8BB12046EF5000938506 /* PlugPagCafe.swift */; };
 		185C8BB4204722B200938506 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C8BB3204722B200938506 /* ListViewController.swift */; };
+		187B22B5206AAB9600C4FDA4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B22B4206AAB9600C4FDA4 /* TableViewController.swift */; };
 		18A1A8A3204598B400AC93E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1A8A2204598B400AC93E2 /* AppDelegate.swift */; };
 		18A1A8A5204598B400AC93E2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1A8A4204598B400AC93E2 /* MainViewController.swift */; };
 		18A1A8A8204598B400AC93E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A1A8A6204598B400AC93E2 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		18151EAF204A02780092266A /* PlugPagDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlugPagDevice.h; path = "PlugPagCafe-Swift/PlugPagDevice.h"; sourceTree = SOURCE_ROOT; };
 		185C8BB12046EF5000938506 /* PlugPagCafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlugPagCafe.swift; sourceTree = "<group>"; };
 		185C8BB3204722B200938506 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		187B22B4206AAB9600C4FDA4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		18A1A89F204598B400AC93E2 /* PlugPagCafe-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlugPagCafe-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A1A8A2204598B400AC93E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A1A8A4204598B400AC93E2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				18A1A8A4204598B400AC93E2 /* MainViewController.swift */,
 				18A1A8BA2045A1E500AC93E2 /* DeviceViewController.swift */,
 				185C8BB3204722B200938506 /* ListViewController.swift */,
+				187B22B4206AAB9600C4FDA4 /* TableViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A1A8A5204598B400AC93E2 /* MainViewController.swift in Sources */,
+				187B22B5206AAB9600C4FDA4 /* TableViewController.swift in Sources */,
 				18A1A8BB2045A1E500AC93E2 /* DeviceViewController.swift in Sources */,
 				185C8BB4204722B200938506 /* ListViewController.swift in Sources */,
 				18A1A8A3204598B400AC93E2 /* AppDelegate.swift in Sources */,
@@ -421,7 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VC4W292XYC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "PlugPagCafe-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -444,7 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VC4W292XYC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "PlugPagCafe-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

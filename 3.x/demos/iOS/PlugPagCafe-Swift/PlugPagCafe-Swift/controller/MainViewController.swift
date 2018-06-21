@@ -19,8 +19,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var txtResult: UITextView!
     
     // MARK: - Variables
-    var amount = 0.0
+    let MSG_ERROR_DEVICE_NULL   = "Não foi possível efetuar uma conexão com o dispositivo pareado"
+    let MSG_ERROR_GENERIC       = "Não foi possível efetuar a operação"
     let MSG_SUCESS              = "Transação Efetuada com sucesso!"
+    var amount = 0.0
     
     // MARK: - UIViewController Cycle
     override func viewDidLoad() {
@@ -34,9 +36,9 @@ class MainViewController: UIViewController {
     }
 
     // MARK: - @IBActions
-    @IBAction func salesList(_ sender: UIBarButtonItem) {
+    @IBAction func peripheralsTouch(_ sender: UIBarButtonItem) {
         
-        self.performSegue(withIdentifier: "goSalesList", sender: nil)
+        self.performSegue(withIdentifier: "goSell", sender: nil)
         
     }
     
@@ -70,12 +72,12 @@ class MainViewController: UIViewController {
         let ret = PlugPag.sharedInstance().setInitBTConnection(deviceSelected)
         
         switch ret?.mResult {
-        case RET_OK?:
+        case RET_OK:
             paymentTransaction()
             break
             
         default:
-            UIUtils.showAlert(view: self, message: "Erro: \(ret!.mResult)" )
+            UIUtils.showAlert(view: self, message: "Erro: \(ret?.mResult) - \(ret?.mMessage)")
             break
         }
         
@@ -105,11 +107,11 @@ class MainViewController: UIViewController {
             updateAmount()
             PlugPagCafe.shared().sales.append(result!)
             txtResult?.attributedText = UIUtils.formatTextGetLastApprovedTransaction(transaction: result!)
-            UIUtils.showAlert(view: self, message: "\(MSG_SUCESS)" )
+            UIUtils.showAlert(view: self, message: (result?.mMessage)!)
             break
             
         default:
-            UIUtils.showAlert(view: self, message: "Erro: \(result!.mResult)" )
+            UIUtils.showAlert(view: self, message: (result?.mMessage)!)
         }
     }
     
@@ -124,6 +126,7 @@ class MainViewController: UIViewController {
             UIUtils.showAlert(view: self, message: "Informe um Peripheral!")
             return false
         }
+        
         return true
     }
     

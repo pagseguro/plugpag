@@ -24,5 +24,10 @@
 @property (nonatomic, strong) NSString *mTransactionId;
 @property (nonatomic, strong) NSString *mAmount;
 @property (nonatomic, strong) NSString *mAvailableBalance;
+@property (nonatomic, strong) NSString *mCardApplication;
+@property (nonatomic, strong) NSString *mCardCryptogram;
+@property (nonatomic, strong) NSString *mLabel;
+@property (nonatomic, strong) NSString *mHolderName;
+@property (nonatomic, strong) NSString *mExtendedHolderName;
 
 @end

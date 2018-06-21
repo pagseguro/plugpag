@@ -36,8 +36,8 @@
 #define APP_NAME_VERSION_NOT_SET        ERR_BASE-17
 #define TRANS_NODATA                    ERR_BASE-18
 #define COMMUNICATION_ERROR             ERR_BASE-19
-#define ERROR_DEVICE_NULL               ERR_BASE-1023
 #define SHARE_MODE_NOT_ALLOWED          ERR_BASE-20
+#define ERROR_DEVICE_NULL               ERR_BASE-1023
 
 #define PP_STATUS_WAITING_CARD          0
 #define PP_STATUS_INSERTED_CARD         1

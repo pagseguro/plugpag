@@ -15,6 +15,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - Variables
     var transactionSelected: PlugPagTransactionResult? = nil
+    let MSG_ERROR_DEVICE_NULL   = "Não foi possível efetuar uma conexão com o dispositivo pareado"
+    let MSG_ERROR_GENERIC       = "Não foi possível efetuar a operação"
     let MSG_SUCESS              = "Transação Efetuada com sucesso!"
     
     // MARK: - UIViewController Cycle
@@ -72,8 +74,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.reloadData()
     }
     
-    // MARK: - @IBActions
-    
     @IBAction func voidAction(_ sender: UIBarButtonItem) {
         
         if transactionSelected != nil {
@@ -85,12 +85,16 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             let ret = PlugPag.sharedInstance().setInitBTConnection(deviceSelected)
             
             switch ret?.mResult {
-            case RET_OK?:
+            case RET_OK:
                 voidTransaction()
                 break
                 
+            case -2023:
+                UIUtils.showAlert(view: self, message: "\(MSG_ERROR_DEVICE_NULL)")
+                break
+                
             default:
-                UIUtils.showAlert(view: self, message: "Erro: \(ret!.mResult)")
+                UIUtils.showAlert(view: self, message: "Erro: \(ret?.mResult) - \(ret?.mMessage)")
                 break
             }
             
@@ -101,7 +105,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             UIUtils.showAlert(view: self, message: "Informe uma transação")
         }
     }
-    
+
     // MARK: - Business Methods
     func voidTransaction() {
         
@@ -114,11 +118,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         case RET_OK?:
             removeVoidData()
-            UIUtils.showAlert(view: self, message: MSG_SUCESS)
+            UIUtils.showAlert(view: self, message: String(describing: result?.mMessage))
             break
             
         default:
-            UIUtils.showAlert(view: self, message: "Erro: \(result!.mResult)")
+            UIUtils.showAlert(view: self, message: String(describing: result?.mMessage))
         }
     }
     
@@ -150,5 +154,15 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.tableView.reloadData()
         }
     }
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
