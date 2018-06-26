@@ -1,5 +1,11 @@
 # PlugPag 3.0
 
+## 3.0.1 - 21/06/2018
+- [iOS] Mais dados no resultado das transações
+- [iOS] Pagamento por voucher
+- [iOS] Correção de valores de parcelamento
+- [iOS] Manual de integração](./3.x/documentos/Manual%20de%20Integração%20-%20iOS.pdf)
+
 ## 3.0.1 - 15/04/2018
 - [Android] Mais dados no resultado das transações
 - [Android] Pagamento por voucher
