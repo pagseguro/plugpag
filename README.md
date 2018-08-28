@@ -53,6 +53,11 @@ Em breve serão disponibilizadas versões para:
 - Embarcados (ARM)
 
 
+# Novidades
+
+As novidades das novas versões estão todas presentes no nosso [changelog][link-changelog].
+
+
 
 
 
@@ -60,3 +65,4 @@ Em breve serão disponibilizadas versões para:
 [link-forum-desenvolvedores]: https://dev.pagseguro.uol.com.br/ (Fórum de desenvolvedores)
 [link-1.x]: ./1.x (PlugPag 1.x)
 [link-3.x]: ./3.x (PlugPag 3.x)
+[link-changelog]: ./CHANGELOG.MD (changelog)

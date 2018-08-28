@@ -1,5 +1,9 @@
 # PlugPag 3.0
 
+## 3.0.2 - 28/08/2018
+- [Android] Suporte à Minizinha Chip
+- [iOS] Suporte à Minizinha Chip
+
 ## 3.0.1 - 21/06/2018
 - [iOS] Mais dados no resultado das transações
 - [iOS] Pagamento por voucher
@@ -18,8 +22,6 @@
     - [[Geral] v1.0.0 | Visão geral do PlugPag 3.x](./3.x/documentos/Manual%20de%20Integração%20-%20Visão%20Geral.pdf)
 - Novos manuais
     - [[iOS] v1.0.0 | Manual de integração](./3.x/documentos/Manual%20de%20Integração%20-%20iOS.pdf)
-
-
 
 ## 3.0.0 - 28/03/2018
 - [Android] Versão inicial
