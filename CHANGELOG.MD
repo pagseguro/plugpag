@@ -1,8 +1,8 @@
 # PlugPag 3.0
 
 ## 3.0.2 - 28/08/2018
-- [Android] Suporte à Minizinha Chip
-- [iOS] Suporte à Minizinha Chip
+- [Android] Suporte à Minizinha Chip (a Minizinha Chip deve estar na versão 1.10.x)
+- [iOS] Suporte à Minizinha Chip (a Minizinha Chip deve estar na versão 1.10.x)
 
 ## 3.0.1 - 21/06/2018
 - [iOS] Mais dados no resultado das transações
