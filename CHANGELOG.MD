@@ -1,5 +1,8 @@
 # PlugPag 3.0
 
+## 3.0.3 - 14/09/2018
+- [Android] Correção de crash em alguns aparelhos ao fazer uso da internet após algumas transações seguidas
+
 ## 3.0.2 - 28/08/2018
 - [Android] Suporte à Minizinha Chip (a Minizinha Chip deve estar na versão 1.10.x)
 - [iOS] Suporte à Minizinha Chip (a Minizinha Chip deve estar na versão 1.10.x)
