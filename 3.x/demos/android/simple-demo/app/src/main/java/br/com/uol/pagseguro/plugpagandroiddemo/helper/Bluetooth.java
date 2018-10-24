@@ -18,7 +18,7 @@ public class Bluetooth {
      * @return First bluetooth terminal found.
      */
     public static final String getTerminal() {
-        return Bluetooth.findBluetoothDevice(new String[] { "PRO-", "W-", "W+-", "PLUS-" });
+        return Bluetooth.findBluetoothDevice(new String[] { "PRO-", "W-", "W+-", "PLUS-", "MCHIP-" });
     }
 
     /**

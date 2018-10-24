@@ -144,7 +144,8 @@ public final class BluetoothListFragment extends DialogFragment implements Adapt
                         device.getName().startsWith("W+-") ||
                         device.getName().startsWith("MOBI-") ||
                         device.getName().startsWith("PAX-") ||
-                        device.getName().startsWith("PLUS-")) {
+                        device.getName().startsWith("PLUS-") ||
+                        device.getName().startsWith("MCHIP-")) {
                     filtered.add(device);
                 }
             }
