@@ -72,12 +72,13 @@ public class VoidPaymentTask
     protected PlugPagTransactionResult doInBackground(PlugPagVoidData... plugPagVoidData) {
         PlugPagTransactionResult result = null;
         PlugPag plugpag = null;
+        int initialization = PlugPag.RET_OK;
 
         plugpag = PlugPagManager.getInstance(null).getPlugPag();
         plugpag.setEventListener(this);
-        result = plugpag.initBTConnection(this.mDevice);
+        initialization = plugpag.initBTConnection(this.mDevice);
 
-        if (result != null && result.getResult() == PlugPag.RET_OK) {
+        if (initialization == PlugPag.RET_OK) {
             if (plugPagVoidData != null &&
                     plugPagVoidData.length > 0 &&
                     plugPagVoidData[0] != null) {

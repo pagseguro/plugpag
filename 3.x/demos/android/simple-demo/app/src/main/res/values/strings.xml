@@ -39,7 +39,7 @@
     <string name="msg_authentication_ok">Usuário autenticado</string>
     <string name="msg_authentication_missing">Usuário NÃO autenticado</string>
     <string name="msg_authentication_failed">Erro na autenticação</string>
-    <string name="msg_payment_info">Tipo: %s\nValor: R$ %.2f\nParcelamento: %dx\n==========\n%s</string>
+    <string name="msg_payment_info">Tipo: %1$s\nValor: R$ %2$.2f\nParcelamento: %3$dx\n==========\n%4$s</string>
     <string name="msg_void_payment_info">Estorno\n==========\n%s</string>
 
     <string name="msg_result_result">Resultado: %d</string>

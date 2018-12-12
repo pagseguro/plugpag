@@ -287,7 +287,7 @@ public final class ReceiptManager {
         SimpleDateFormat dateFormatter = null;
 
         try {
-            dateParser = new SimpleDateFormat("ddMMyyyy HHmmss");
+            dateParser = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
             dateFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             list = new ArrayList<>();
             reader = new BufferedReader(new FileReader(file));

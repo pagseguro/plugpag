@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.uol.pagseguro.plugpag.PlugPag;
+import br.com.uol.pagseguro.plugpag.PlugPagAuthenticationListener;
 import br.com.uol.pagseguro.plugpag.PlugPagPaymentData;
 import br.com.uol.pagseguro.plugpag.PlugPagTransactionResult;
 import br.com.uol.pagseguro.plugpag.PlugPagVoidData;
@@ -35,7 +36,7 @@ import br.com.uol.pagseguro.plugpagandroiddemo.task.TerminalVoidPaymentTask;
 
 public class MainActivity
         extends AppCompatActivity
-        implements View.OnClickListener, TaskHandler {
+        implements View.OnClickListener, TaskHandler, PlugPagAuthenticationListener {
 
     // -----------------------------------------------------------------------------------------------------------------
     // Constants
@@ -60,19 +61,6 @@ public class MainActivity
 
         PlugPagManager.create(this.getApplicationContext());
         this.setupEventListeners();
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == PlugPag.REQUEST_CODE_AUTHENTICATION) {
-            if (resultCode == PlugPag.RET_OK) {
-                this.showMessage(R.string.msg_authentication_ok);
-            } else {
-                this.showMessage(R.string.msg_authentication_failed);
-            }
-        }
     }
 
     // -----------------------------------------------------------------------------------------------------------------
@@ -680,4 +668,13 @@ public class MainActivity
         this.showMessage(resultDisplay);
     }
 
+    @Override
+    public void onSuccess() {
+        this.showMessage(R.string.msg_authentication_ok);
+    }
+
+    @Override
+    public void onError() {
+        this.showMessage(R.string.msg_authentication_failed);
+    }
 }

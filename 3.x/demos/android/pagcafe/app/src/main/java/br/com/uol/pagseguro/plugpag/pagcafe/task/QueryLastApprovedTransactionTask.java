@@ -56,11 +56,12 @@ public class QueryLastApprovedTransactionTask extends AsyncTask<Void, Void, Plug
     protected PlugPagTransactionResult doInBackground(Void... voids) {
         PlugPagTransactionResult transactionResult = null;
         PlugPag plugpag = null;
+        int initialization = PlugPag.RET_OK;
 
         plugpag = PlugPagManager.getInstance().getPlugPag();
-        transactionResult = plugpag.initBTConnection(this.mDevice);
+        initialization = plugpag.initBTConnection(this.mDevice);
 
-        if (transactionResult != null && transactionResult.getResult() == PlugPag.RET_OK) {
+        if (initialization == PlugPag.RET_OK) {
             transactionResult = plugpag.getLastApprovedTransaction();
         }
 

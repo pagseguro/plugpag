@@ -75,9 +75,9 @@ public class PaymentTransactionTask
                 plugPagPaymentData[0] != null) {
             plugpag = PlugPagManager.getInstance(null).getPlugPag();
             plugpag.setEventListener(this);
-            result = plugpag.initBTConnection(this.mDevice);
+            initialization = plugpag.initBTConnection(this.mDevice);
 
-            if (result != null && result.getResult() == PlugPag.RET_OK) {
+            if (initialization == PlugPag.RET_OK) {
                 result = plugpag.doPayment(plugPagPaymentData[0]);
 
                 if (result != null && result.getResult() == PlugPag.RET_OK) {

@@ -28,6 +28,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.uol.pagseguro.plugpag.PlugPagAuthenticationListener;
 import br.com.uol.pagseguro.plugpag.pagcafe.OnAbortListener;
 import br.com.uol.pagseguro.plugpag.pagcafe.R;
 import br.com.uol.pagseguro.plugpag.pagcafe.bluetooth.Bluetooth;
@@ -55,7 +56,7 @@ public final class MainActivity
         extends AppCompatActivity
         implements OnFragmentInteractionListener, Bluetooth.BluetoothObservable, OnNetworkChanged,
         QueryLastApprovedTransactionTask.OnQueryLastApprovedTransactionListener,
-        OnAbortListener, OnBluetoothStateChanged {
+        OnAbortListener, OnBluetoothStateChanged, PlugPagAuthenticationListener {
 
     // ---------------------------------------------------------------------------------------------
     // Constants
@@ -840,4 +841,13 @@ public final class MainActivity
 //        PlugPagManager.getInstance().getPlugPag().abort();
     }
 
+    @Override
+    public void onSuccess() {
+
+    }
+
+    @Override
+    public void onError() {
+
+    }
 }

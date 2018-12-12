@@ -477,7 +477,7 @@ public class CoffeePaymentFragment
                         this.getString(R.string.title_error),
                         this.getString(R.string.msg_missing_result));
             } else {
-                if (result.getResult() == PlugPag.RET_OK && TextUtils.isEmpty(result.getErrorCode())) {
+                if (result.getResult() == PlugPag.RET_OK) {
                     // Show transaction result
                     this.showTransactionSuccessDialog(result);
                 } else {
