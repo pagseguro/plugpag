@@ -1,5 +1,8 @@
 # PlugPag 3.0
 
+## 3.0.3 - 15/03/2019
+- [iOS] Adicionado Release candidate para correção de bug em alguns aparelhos com versão iOS 12
+
 ## 3.0.3 - 14/09/2018
 - [Android] Correção de crash em alguns aparelhos ao fazer uso da internet após algumas transações seguidas
 
