@@ -16,6 +16,9 @@ allprojects {
         maven {
             url 'https://github.com/pagseguromaster/plugpag/raw/master/3.x/android'
         }
+        flatDir {
+            dirs 'C:\\repos\\pagseguro-switch-client\\fontesjava\\Android\\pagcafe\\plugpag\\build\\outputs\\aar'
+        }
     }
 }
 
