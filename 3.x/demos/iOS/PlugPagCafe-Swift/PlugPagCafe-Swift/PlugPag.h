@@ -85,6 +85,8 @@
 
 -(PlugPagTransactionResult *) getLastApprovedTransaction;
 
+-(NSArray *) calculateInstallments:(NSString *) saleValue;
+
 -(int) plugPagAppIdentification :(NSString *)appName withVersion:(NSString *) appVersion;
 
 -(BOOL) isAuthenticated;

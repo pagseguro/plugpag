@@ -33,7 +33,11 @@ class DeviceViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated);
+        refreshControl.endRefreshing()
     }
 
     override func didReceiveMemoryWarning() {

@@ -21,7 +21,8 @@ typedef enum PaymentMethodTypes
 typedef enum InstallmentTypes
 {
     A_VISTA         = 1,
-    PARC_VENDEDOR   = 2
+    PARC_VENDEDOR   = 2,
+    PARC_COMPRADOR  = 3
 } InstallmentType;
 
 @property (nonatomic, assign) PaymentMethod mType;
@@ -29,5 +30,6 @@ typedef enum InstallmentTypes
 @property (nonatomic, assign) InstallmentType mInstallmentType;
 @property (nonatomic, assign) int mInstallment;
 @property (nonatomic, strong) NSString *mUserReference;
+@property (nonatomic, strong) UIViewController *mViewController;
 
 @end

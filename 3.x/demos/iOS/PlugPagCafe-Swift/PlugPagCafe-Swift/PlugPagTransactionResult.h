@@ -29,5 +29,6 @@
 @property (nonatomic, strong) NSString *mLabel;
 @property (nonatomic, strong) NSString *mHolderName;
 @property (nonatomic, strong) NSString *mExtendedHolderName;
+@property (nonatomic, strong) NSString *mErrorCode;
 
 @end

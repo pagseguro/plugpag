@@ -19,5 +19,6 @@ typedef enum PlugPagDeviceTypes
 
 @property (nonatomic, assign) DeviceTypes mType;
 @property (nonatomic, strong) NSString *mPeripheralName;
+@property (nonatomic, strong) NSString *mPeripheralModel;
 
 @end

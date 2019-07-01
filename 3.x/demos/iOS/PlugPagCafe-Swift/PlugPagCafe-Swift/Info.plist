@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Usamos a localização para melhorar os serviços de operadoras</string>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>É necessário o uso do Bluetooth para comunicação com as maquinas PagSeguro</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -24,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>É necessário o uso do Bluetooth para comunicação com as maquinas PagSeguro</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Usamos a localização para melhorar os serviços de operadoras</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -31,6 +31,11 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+	</array>
+	<key>UISupportedExternalAccessoryProtocols</key>
+	<array>
+		<string>com.paxsz.iPOS</string>
+		<string>br.com.gertec.protocoloGertec</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18246ED522CA8B2B0032D6F7 /* PlugPag.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18246ED322CA8B2B0032D6F7 /* PlugPag.bundle */; };
+		18246ED822CA8B3D0032D6F7 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18246ED722CA8B3D0032D6F7 /* UIUtils.swift */; };
 		185C8BB22046EF5000938506 /* PlugPagCafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C8BB12046EF5000938506 /* PlugPagCafe.swift */; };
 		185C8BB4204722B200938506 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C8BB3204722B200938506 /* ListViewController.swift */; };
 		187B22B5206AAB9600C4FDA4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B22B4206AAB9600C4FDA4 /* TableViewController.swift */; };
@@ -17,18 +19,19 @@
 		18A1A8AD204598B400AC93E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A1A8AB204598B400AC93E2 /* LaunchScreen.storyboard */; };
 		18A1A8B72045995200AC93E2 /* libPlugPag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A1A8B62045995200AC93E2 /* libPlugPag.a */; };
 		18A1A8BB2045A1E500AC93E2 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1A8BA2045A1E500AC93E2 /* DeviceViewController.swift */; };
-		18A1A8BD2045A39D00AC93E2 /* PlugPag.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18A1A8BC2045A39D00AC93E2 /* PlugPag.bundle */; };
-		18A1A8CE2045C38700AC93E2 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1A8CD2045C38700AC93E2 /* UIUtils.swift */; };
+		18ACC855219CA68000469B1C /* InstallmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACC854219CA68000469B1C /* InstallmentsTableViewController.swift */; };
 		E6C403A11CEF25BA92E2BDD5 /* libPods-PlugPagCafe-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 477F51F4D4B46FE1F320D855 /* libPods-PlugPagCafe-Swift.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18151EAA204A02770092266A /* PlugPagTransactionResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlugPagTransactionResult.h; path = "PlugPagCafe-Swift/PlugPagTransactionResult.h"; sourceTree = SOURCE_ROOT; };
-		18151EAB204A02770092266A /* PlugPagAbortResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlugPagAbortResult.h; path = "PlugPagCafe-Swift/PlugPagAbortResult.h"; sourceTree = SOURCE_ROOT; };
-		18151EAC204A02770092266A /* PlugPagVoidData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlugPagVoidData.h; path = "PlugPagCafe-Swift/PlugPagVoidData.h"; sourceTree = SOURCE_ROOT; };
-		18151EAD204A02770092266A /* PlugPag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlugPag.h; path = "PlugPagCafe-Swift/PlugPag.h"; sourceTree = SOURCE_ROOT; };
-		18151EAE204A02780092266A /* PlugPagPaymentData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlugPagPaymentData.h; path = "PlugPagCafe-Swift/PlugPagPaymentData.h"; sourceTree = SOURCE_ROOT; };
-		18151EAF204A02780092266A /* PlugPagDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlugPagDevice.h; path = "PlugPagCafe-Swift/PlugPagDevice.h"; sourceTree = SOURCE_ROOT; };
+		18246ECE22CA8B2B0032D6F7 /* PlugPagAbortResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugPagAbortResult.h; sourceTree = "<group>"; };
+		18246ECF22CA8B2B0032D6F7 /* PlugPagPaymentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugPagPaymentData.h; sourceTree = "<group>"; };
+		18246ED022CA8B2B0032D6F7 /* PlugPagDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugPagDevice.h; sourceTree = "<group>"; };
+		18246ED122CA8B2B0032D6F7 /* PlugPag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugPag.h; sourceTree = "<group>"; };
+		18246ED222CA8B2B0032D6F7 /* PlugPagTransactionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugPagTransactionResult.h; sourceTree = "<group>"; };
+		18246ED322CA8B2B0032D6F7 /* PlugPag.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PlugPag.bundle; sourceTree = "<group>"; };
+		18246ED422CA8B2B0032D6F7 /* PlugPagVoidData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugPagVoidData.h; sourceTree = "<group>"; };
+		18246ED722CA8B3D0032D6F7 /* UIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		185C8BB12046EF5000938506 /* PlugPagCafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlugPagCafe.swift; sourceTree = "<group>"; };
 		185C8BB3204722B200938506 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		187B22B4206AAB9600C4FDA4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -42,8 +45,7 @@
 		18A1A8B62045995200AC93E2 /* libPlugPag.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPlugPag.a; path = "PlugPagCafe-Swift/libPlugPag.a"; sourceTree = "<group>"; };
 		18A1A8B920459B2D00AC93E2 /* PlugPagCafe-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlugPagCafe-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		18A1A8BA2045A1E500AC93E2 /* DeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
-		18A1A8BC2045A39D00AC93E2 /* PlugPag.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PlugPag.bundle; path = "PlugPagCafe-Swift/PlugPag.bundle"; sourceTree = SOURCE_ROOT; };
-		18A1A8CD2045C38700AC93E2 /* UIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIUtils.swift; path = "PlugPagCafe-Swift/UIUtils.swift"; sourceTree = SOURCE_ROOT; };
+		18ACC854219CA68000469B1C /* InstallmentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsTableViewController.swift; sourceTree = "<group>"; };
 		2430D283929404360502B763 /* Pods-PlugPagCafe-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlugPagCafe-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlugPagCafe-Swift/Pods-PlugPagCafe-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		477F51F4D4B46FE1F320D855 /* libPods-PlugPagCafe-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlugPagCafe-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D326168856C227CF66C3D445 /* Pods-PlugPagCafe-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlugPagCafe-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlugPagCafe-Swift/Pods-PlugPagCafe-Swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +64,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18246ECD22CA8B0E0032D6F7 /* libPlugPag */ = {
+			isa = PBXGroup;
+			children = (
+				18246ED322CA8B2B0032D6F7 /* PlugPag.bundle */,
+				18246ED122CA8B2B0032D6F7 /* PlugPag.h */,
+				18246ECE22CA8B2B0032D6F7 /* PlugPagAbortResult.h */,
+				18246ED022CA8B2B0032D6F7 /* PlugPagDevice.h */,
+				18246ECF22CA8B2B0032D6F7 /* PlugPagPaymentData.h */,
+				18246ED222CA8B2B0032D6F7 /* PlugPagTransactionResult.h */,
+				18246ED422CA8B2B0032D6F7 /* PlugPagVoidData.h */,
+			);
+			name = libPlugPag;
+			sourceTree = "<group>";
+		};
+		18246ED622CA8B330032D6F7 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				18246ED722CA8B3D0032D6F7 /* UIUtils.swift */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
 		18A1A896204598B400AC93E2 = {
 			isa = PBXGroup;
 			children = (
@@ -84,9 +108,9 @@
 		18A1A8A1204598B400AC93E2 /* PlugPagCafe-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				18A1A8CC2045C37A00AC93E2 /* utils */,
+				18246ED622CA8B330032D6F7 /* utils */,
+				18246ECD22CA8B0E0032D6F7 /* libPlugPag */,
 				18A1A8CB2045A9A700AC93E2 /* controller */,
-				18A1A8B4204598FA00AC93E2 /* libPlugPag */,
 				18A1A8A2204598B400AC93E2 /* AppDelegate.swift */,
 				18A1A8A6204598B400AC93E2 /* Main.storyboard */,
 				18A1A8A9204598B400AC93E2 /* Assets.xcassets */,
@@ -95,20 +119,6 @@
 				185C8BB12046EF5000938506 /* PlugPagCafe.swift */,
 			);
 			path = "PlugPagCafe-Swift";
-			sourceTree = "<group>";
-		};
-		18A1A8B4204598FA00AC93E2 /* libPlugPag */ = {
-			isa = PBXGroup;
-			children = (
-				18151EAD204A02770092266A /* PlugPag.h */,
-				18151EAB204A02770092266A /* PlugPagAbortResult.h */,
-				18151EAF204A02780092266A /* PlugPagDevice.h */,
-				18151EAE204A02780092266A /* PlugPagPaymentData.h */,
-				18151EAA204A02770092266A /* PlugPagTransactionResult.h */,
-				18151EAC204A02770092266A /* PlugPagVoidData.h */,
-				18A1A8BC2045A39D00AC93E2 /* PlugPag.bundle */,
-			);
-			path = libPlugPag;
 			sourceTree = "<group>";
 		};
 		18A1A8B52045995200AC93E2 /* Frameworks */ = {
@@ -127,16 +137,9 @@
 				18A1A8BA2045A1E500AC93E2 /* DeviceViewController.swift */,
 				185C8BB3204722B200938506 /* ListViewController.swift */,
 				187B22B4206AAB9600C4FDA4 /* TableViewController.swift */,
+				18ACC854219CA68000469B1C /* InstallmentsTableViewController.swift */,
 			);
 			path = controller;
-			sourceTree = "<group>";
-		};
-		18A1A8CC2045C37A00AC93E2 /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				18A1A8CD2045C38700AC93E2 /* UIUtils.swift */,
-			);
-			path = utils;
 			sourceTree = "<group>";
 		};
 		A47E229B83D3B2FD5BCAA71A /* Pods */ = {
@@ -159,7 +162,6 @@
 				18A1A89B204598B400AC93E2 /* Sources */,
 				18A1A89C204598B400AC93E2 /* Frameworks */,
 				18A1A89D204598B400AC93E2 /* Resources */,
-				E3559159942891D39CB0E8D9 /* [CP] Embed Pods Frameworks */,
 				53903E1830E780B85CCECA2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -212,7 +214,7 @@
 			files = (
 				18A1A8AD204598B400AC93E2 /* LaunchScreen.storyboard in Resources */,
 				18A1A8AA204598B400AC93E2 /* Assets.xcassets in Resources */,
-				18A1A8BD2045A39D00AC93E2 /* PlugPag.bundle in Resources */,
+				18246ED522CA8B2B0032D6F7 /* PlugPag.bundle in Resources */,
 				18A1A8A8204598B400AC93E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,7 +233,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -256,21 +258,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E3559159942891D39CB0E8D9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlugPagCafe-Swift/Pods-PlugPagCafe-Swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -283,8 +270,9 @@
 				18A1A8BB2045A1E500AC93E2 /* DeviceViewController.swift in Sources */,
 				185C8BB4204722B200938506 /* ListViewController.swift in Sources */,
 				18A1A8A3204598B400AC93E2 /* AppDelegate.swift in Sources */,
+				18ACC855219CA68000469B1C /* InstallmentsTableViewController.swift in Sources */,
 				185C8BB22046EF5000938506 /* PlugPagCafe.swift in Sources */,
-				18A1A8CE2045C38700AC93E2 /* UIUtils.swift in Sources */,
+				18246ED822CA8B3D0032D6F7 /* UIUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VC4W292XYC;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "PlugPagCafe-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -448,7 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VC4W292XYC;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "PlugPagCafe-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

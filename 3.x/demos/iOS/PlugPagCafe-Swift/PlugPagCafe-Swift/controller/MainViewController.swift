@@ -23,6 +23,7 @@ class MainViewController: UIViewController {
     let MSG_ERROR_GENERIC       = "Não foi possível efetuar a operação"
     let MSG_SUCESS              = "Transação Efetuada com sucesso!"
     var amount = 0.0
+    var installments: [NSString] = []
     
     // MARK: - UIViewController Cycle
     override func viewDidLoad() {
@@ -33,6 +34,14 @@ class MainViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goInstallments" {
+            let controller: InstallmentsTableViewController = segue.destination as! InstallmentsTableViewController
+            controller.installments = installments
+        }
     }
 
     // MARK: - @IBActions
@@ -83,6 +92,15 @@ class MainViewController: UIViewController {
         
         UIUtils.hideProgress()
         sender.isEnabled = true
+    }
+    
+    @IBAction func calculateInstallmentsView(_ sender: UIButton) {
+    
+        var value = String(format: "%.02f", amount)
+        value = value.replacingOccurrences(of: ".", with: "")
+        
+        installments = PlugPag.sharedInstance().calculateInstallments(value) as! [NSString]
+        self.performSegue(withIdentifier: "goInstallments", sender: nil)
     }
     
     // MARK: - Business Methods
