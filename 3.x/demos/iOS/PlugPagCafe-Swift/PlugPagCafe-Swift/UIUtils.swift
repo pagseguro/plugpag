@@ -36,6 +36,7 @@ class UIUtils: NSObject {
         
         let txMensagem = "Mensagem:"
         let txTrCode = "Tr. Code:"
+        let txTrID = "Tr. ID:"
         let txDate = "Date:"
         let txTime = "Time:"
         let txHost = "Host NSU:"
@@ -45,10 +46,11 @@ class UIUtils: NSObject {
         let txUserReference = "User Reference:"
         let txTerSerial = "Terminal Serial:"
         
-        let strTextView = String("\(txMensagem) \(transaction.mMessage!) \n \(txTrCode) \(transaction.mTransactionCode!) \n \(txDate) \(transaction.mDate!) \n \(txTime) \(transaction.mTime!) \n \(txHost) \(transaction.mHostNsu!) \n \(txCardBrand) \(transaction.mCardBrand!) \n \(txBin) \(transaction.mBin!) \n \(txHolder) \(transaction.mHolder!) \n \(txUserReference) \(transaction.mUserReference!) \n \(txTerSerial) \(transaction.mTerminalSerialNumber!)")
+        let strTextView = String("\(txMensagem) \(transaction.mMessage!) \n \(txTrCode) \(transaction.mTransactionCode!) \n \(txTrID) \(transaction.mTransactionId!) \n \(txDate) \(transaction.mDate!) \n \(txTime) \(transaction.mTime!) \n \(txHost) \(transaction.mHostNsu!) \n \(txCardBrand) \(transaction.mCardBrand!) \n \(txBin) \(transaction.mBin!) \n \(txHolder) \(transaction.mHolder!) \n \(txUserReference) \(transaction.mUserReference!) \n \(txTerSerial) \(transaction.mTerminalSerialNumber!)")
         
         let rangeMensagem           = strTextView.range(of: txMensagem)
         let rangeTrCode             = strTextView.range(of: txTrCode)
+        let rangeTrID               = strTextView.range(of: txTrID)
         let rangeDate               = strTextView.range(of: txDate)
         let rangeTime               = strTextView.range(of: txTime)
         let rangeHost               = strTextView.range(of: txHost)
@@ -68,6 +70,7 @@ class UIUtils: NSObject {
         let mutAttrTextViewString = NSMutableAttributedString(string: strTextView)
         mutAttrTextViewString.setAttributes(dictBoldText, range: (strTextView.nsRange(from: rangeMensagem!)))
         mutAttrTextViewString.setAttributes(dictBoldText, range: (strTextView.nsRange(from: rangeTrCode!)))
+        mutAttrTextViewString.setAttributes(dictBoldText, range: (strTextView.nsRange(from: rangeTrID!)))
         mutAttrTextViewString.setAttributes(dictBoldText, range: (strTextView.nsRange(from: rangeDate!)))
         mutAttrTextViewString.setAttributes(dictBoldText, range: (strTextView.nsRange(from: rangeTime!)))
         mutAttrTextViewString.setAttributes(dictBoldText, range: (strTextView.nsRange(from: rangeHost!)))
@@ -136,7 +139,7 @@ class UIUtils: NSObject {
     class func formatCurrency(value: Float) -> NSMutableAttributedString {
         
         let formatter = NumberFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "pt_BR") as Locale!
+        formatter.locale = NSLocale(localeIdentifier: "pt_BR") as Locale
         formatter.numberStyle = .currency
         
         let msg = formatter.string(from: value as NSNumber)!

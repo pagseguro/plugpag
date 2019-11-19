@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AAC11A529CDF268D84B6CA4E93497772"
+               BlueprintIdentifier = "26837A6EFD3E35A92DF72E85F39925E7"
+               BuildableName = "libPods-PlugPagCafe-Swift.a"
                BlueprintName = "Pods-PlugPagCafe-Swift"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-PlugPagCafe-Swift.a">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

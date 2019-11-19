@@ -1,5 +1,8 @@
 # PlugPag 3
 
+## 3.2.0 - 19/11/2019
+- [iOS] Atualizações de Bluetooth
+
 ## 3.1.2 - 07/05/2019
 - [Android] Correção de bugs
 

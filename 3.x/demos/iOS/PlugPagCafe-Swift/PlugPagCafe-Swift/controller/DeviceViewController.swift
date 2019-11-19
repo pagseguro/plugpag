@@ -8,10 +8,10 @@
 
 import UIKit
 
-class DeviceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PP_PlugPagDelegate {
+class DeviceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DeviceViewModelDelegate {
 
     // MARK: - Variables
-    var peripherals: [PlugPagDevice] = []
+    let viewModel = DeviceViewModel()
     
     // MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
@@ -20,9 +20,8 @@ class DeviceViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: - UIViewController Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        PlugPag.sharedInstance().plugPagAppIdentification("PlugPagCafe", withVersion: "1.0")
-        PlugPag.sharedInstance().delegate = self
+        
+        viewModel.delegate = self
         
         refreshControl = UIRefreshControl()
         refreshControl?.backgroundColor = UIColor.yellow
@@ -33,10 +32,6 @@ class DeviceViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated);
         refreshControl.endRefreshing()
     }
 
@@ -47,48 +42,15 @@ class DeviceViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     // MARK: - @IBActions
     @objc func startScan(sender:AnyObject) {
-        peripherals.removeAll()
-        tableView.reloadData()
-        PlugPag.sharedInstance().startScanForPeripherals()
+        viewModel.startScan()
     }
     
     @IBAction func pairPeripheral(_ sender: UIButton) {
-    
-        if PlugPagCafe.shared().deviceSelected != nil {
-            PlugPag.sharedInstance().pairPeripheral(PlugPagCafe.shared().deviceSelected)
-        }else{
-            UIUtils.showAlert(view: self, message: "Selecione um Peripheral!")
-        }
+        viewModel.pair()
     }
     
     @IBAction func loginAction(_ sender: UIBarButtonItem) {
-        
-        PlugPag.sharedInstance().requestAuthentication(self)
-    }
-    
-    // MARK: - PlugPag Delegate
-    func peripheralDiscover(_ plugPagDevice: PlugPagDevice!) {
-        
-        peripherals.append(plugPagDevice)
-        refreshControl.endRefreshing()
-        tableView.reloadData()
-    }
-    
-    func pairPeripheralStatus(_ status: Int32) {
-        
-        switch status {
-        
-        case BT_PAIR_STATE_OK:
-            UIUtils.showAlert(view: self, message: "Pareamento efetuado com sucesso!")
-            break
-            
-        case BT_PAIR_STATE_FAIL:
-            UIUtils.showAlert(view: self, message: "Pareamento Falhou!")
-            break
-            
-        default:
-            break
-        }
+        viewModel.login(view: self)
     }
     
     // MARK: - Table view data source
@@ -100,13 +62,13 @@ class DeviceViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return peripherals.count
+        return viewModel.peripherals.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath)
 
-        let peripheral = peripherals[indexPath.row]
+        let peripheral = viewModel.peripherals[indexPath.row]
         
         // Configure the cell...
         cell.textLabel?.text = peripheral.mPeripheralName
@@ -123,9 +85,18 @@ class DeviceViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        PlugPagCafe.shared().deviceSelected = peripherals[indexPath.row]
+        viewModel.setPeripheralSelected(index: indexPath.row)
         self.tableView.reloadData()
     }
-
+    
+    // MARK: - DeviceViewModel Delegate
+    func updateData() {
+        refreshControl.endRefreshing()
+        tableView.reloadData()
+    }
+    
+    func showAlert(messenger: String) {
+        refreshControl.endRefreshing()
+        UIUtils.showAlert(view: self, message: messenger)
+    }
 }

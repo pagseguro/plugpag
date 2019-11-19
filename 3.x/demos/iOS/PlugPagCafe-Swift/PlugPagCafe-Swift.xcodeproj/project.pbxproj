@@ -7,37 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18246ED522CA8B2B0032D6F7 /* PlugPag.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18246ED322CA8B2B0032D6F7 /* PlugPag.bundle */; };
-		18246ED822CA8B3D0032D6F7 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18246ED722CA8B3D0032D6F7 /* UIUtils.swift */; };
+		1843DB6623832623004A252B /* SaleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843DB6523832623004A252B /* SaleViewModel.swift */; };
+		1843DB6823833682004A252B /* SaleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843DB6723833682004A252B /* SaleListViewModel.swift */; };
+		1843DB6A23833E40004A252B /* DeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843DB6923833E40004A252B /* DeviceViewModel.swift */; };
 		185C8BB22046EF5000938506 /* PlugPagCafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C8BB12046EF5000938506 /* PlugPagCafe.swift */; };
-		185C8BB4204722B200938506 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C8BB3204722B200938506 /* ListViewController.swift */; };
-		187B22B5206AAB9600C4FDA4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B22B4206AAB9600C4FDA4 /* TableViewController.swift */; };
+		185C8BB4204722B200938506 /* SaleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C8BB3204722B200938506 /* SaleListViewController.swift */; };
+		185D91AD237DFF6600D432D2 /* PlugPag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185D91AB237DFF6500D432D2 /* PlugPag.framework */; };
+		185D91AE237DFF6600D432D2 /* PlugPag.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 185D91AC237DFF6500D432D2 /* PlugPag.bundle */; };
+		185D91B22382C2FF00D432D2 /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D91B12382C2FF00D432D2 /* TransactionManager.swift */; };
 		18A1A8A3204598B400AC93E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1A8A2204598B400AC93E2 /* AppDelegate.swift */; };
-		18A1A8A5204598B400AC93E2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1A8A4204598B400AC93E2 /* MainViewController.swift */; };
+		18A1A8A5204598B400AC93E2 /* SaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1A8A4204598B400AC93E2 /* SaleViewController.swift */; };
 		18A1A8A8204598B400AC93E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A1A8A6204598B400AC93E2 /* Main.storyboard */; };
 		18A1A8AA204598B400AC93E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A1A8A9204598B400AC93E2 /* Assets.xcassets */; };
 		18A1A8AD204598B400AC93E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A1A8AB204598B400AC93E2 /* LaunchScreen.storyboard */; };
-		18A1A8B72045995200AC93E2 /* libPlugPag.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A1A8B62045995200AC93E2 /* libPlugPag.a */; };
 		18A1A8BB2045A1E500AC93E2 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1A8BA2045A1E500AC93E2 /* DeviceViewController.swift */; };
-		18ACC855219CA68000469B1C /* InstallmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACC854219CA68000469B1C /* InstallmentsTableViewController.swift */; };
+		18A1A8CE2045C38700AC93E2 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1A8CD2045C38700AC93E2 /* UIUtils.swift */; };
 		E6C403A11CEF25BA92E2BDD5 /* libPods-PlugPagCafe-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 477F51F4D4B46FE1F320D855 /* libPods-PlugPagCafe-Swift.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18246ECE22CA8B2B0032D6F7 /* PlugPagAbortResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugPagAbortResult.h; sourceTree = "<group>"; };
-		18246ECF22CA8B2B0032D6F7 /* PlugPagPaymentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugPagPaymentData.h; sourceTree = "<group>"; };
-		18246ED022CA8B2B0032D6F7 /* PlugPagDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugPagDevice.h; sourceTree = "<group>"; };
-		18246ED122CA8B2B0032D6F7 /* PlugPag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugPag.h; sourceTree = "<group>"; };
-		18246ED222CA8B2B0032D6F7 /* PlugPagTransactionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugPagTransactionResult.h; sourceTree = "<group>"; };
-		18246ED322CA8B2B0032D6F7 /* PlugPag.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PlugPag.bundle; sourceTree = "<group>"; };
-		18246ED422CA8B2B0032D6F7 /* PlugPagVoidData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugPagVoidData.h; sourceTree = "<group>"; };
-		18246ED722CA8B3D0032D6F7 /* UIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		1843DB6523832623004A252B /* SaleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleViewModel.swift; sourceTree = "<group>"; };
+		1843DB6723833682004A252B /* SaleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleListViewModel.swift; sourceTree = "<group>"; };
+		1843DB6923833E40004A252B /* DeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewModel.swift; sourceTree = "<group>"; };
 		185C8BB12046EF5000938506 /* PlugPagCafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlugPagCafe.swift; sourceTree = "<group>"; };
-		185C8BB3204722B200938506 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		187B22B4206AAB9600C4FDA4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		185C8BB3204722B200938506 /* SaleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleListViewController.swift; sourceTree = "<group>"; };
+		185D91AB237DFF6500D432D2 /* PlugPag.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlugPag.framework; path = "PlugPagCafe-Swift/PlugPag.framework"; sourceTree = SOURCE_ROOT; };
+		185D91AC237DFF6500D432D2 /* PlugPag.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PlugPag.bundle; path = "PlugPagCafe-Swift/PlugPag.bundle"; sourceTree = SOURCE_ROOT; };
+		185D91B12382C2FF00D432D2 /* TransactionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionManager.swift; sourceTree = "<group>"; };
 		18A1A89F204598B400AC93E2 /* PlugPagCafe-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlugPagCafe-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A1A8A2204598B400AC93E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18A1A8A4204598B400AC93E2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		18A1A8A4204598B400AC93E2 /* SaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleViewController.swift; sourceTree = "<group>"; };
 		18A1A8A7204598B400AC93E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18A1A8A9204598B400AC93E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18A1A8AC204598B400AC93E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -45,7 +44,7 @@
 		18A1A8B62045995200AC93E2 /* libPlugPag.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPlugPag.a; path = "PlugPagCafe-Swift/libPlugPag.a"; sourceTree = "<group>"; };
 		18A1A8B920459B2D00AC93E2 /* PlugPagCafe-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlugPagCafe-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		18A1A8BA2045A1E500AC93E2 /* DeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
-		18ACC854219CA68000469B1C /* InstallmentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsTableViewController.swift; sourceTree = "<group>"; };
+		18A1A8CD2045C38700AC93E2 /* UIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIUtils.swift; path = "PlugPagCafe-Swift/UIUtils.swift"; sourceTree = SOURCE_ROOT; };
 		2430D283929404360502B763 /* Pods-PlugPagCafe-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlugPagCafe-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlugPagCafe-Swift/Pods-PlugPagCafe-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		477F51F4D4B46FE1F320D855 /* libPods-PlugPagCafe-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlugPagCafe-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D326168856C227CF66C3D445 /* Pods-PlugPagCafe-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlugPagCafe-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlugPagCafe-Swift/Pods-PlugPagCafe-Swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -56,34 +55,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A1A8B72045995200AC93E2 /* libPlugPag.a in Frameworks */,
 				E6C403A11CEF25BA92E2BDD5 /* libPods-PlugPagCafe-Swift.a in Frameworks */,
+				185D91AD237DFF6600D432D2 /* PlugPag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18246ECD22CA8B0E0032D6F7 /* libPlugPag */ = {
+		1843DB6223832516004A252B /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				18246ED322CA8B2B0032D6F7 /* PlugPag.bundle */,
-				18246ED122CA8B2B0032D6F7 /* PlugPag.h */,
-				18246ECE22CA8B2B0032D6F7 /* PlugPagAbortResult.h */,
-				18246ED022CA8B2B0032D6F7 /* PlugPagDevice.h */,
-				18246ECF22CA8B2B0032D6F7 /* PlugPagPaymentData.h */,
-				18246ED222CA8B2B0032D6F7 /* PlugPagTransactionResult.h */,
-				18246ED422CA8B2B0032D6F7 /* PlugPagVoidData.h */,
+				18A1A8A4204598B400AC93E2 /* SaleViewController.swift */,
+				1843DB6523832623004A252B /* SaleViewModel.swift */,
 			);
-			name = libPlugPag;
+			name = MainView;
 			sourceTree = "<group>";
 		};
-		18246ED622CA8B330032D6F7 /* utils */ = {
+		1843DB6323832527004A252B /* DeviceView */ = {
 			isa = PBXGroup;
 			children = (
-				18246ED722CA8B3D0032D6F7 /* UIUtils.swift */,
+				18A1A8BA2045A1E500AC93E2 /* DeviceViewController.swift */,
+				1843DB6923833E40004A252B /* DeviceViewModel.swift */,
 			);
-			name = utils;
+			name = DeviceView;
+			sourceTree = "<group>";
+		};
+		1843DB6423832536004A252B /* SaleListView */ = {
+			isa = PBXGroup;
+			children = (
+				185C8BB3204722B200938506 /* SaleListViewController.swift */,
+				1843DB6723833682004A252B /* SaleListViewModel.swift */,
+			);
+			name = SaleListView;
 			sourceTree = "<group>";
 		};
 		18A1A896204598B400AC93E2 = {
@@ -108,17 +112,25 @@
 		18A1A8A1204598B400AC93E2 /* PlugPagCafe-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				18246ED622CA8B330032D6F7 /* utils */,
-				18246ECD22CA8B0E0032D6F7 /* libPlugPag */,
+				18A1A8CC2045C37A00AC93E2 /* utils */,
 				18A1A8CB2045A9A700AC93E2 /* controller */,
+				18A1A8B4204598FA00AC93E2 /* libPlugPag */,
 				18A1A8A2204598B400AC93E2 /* AppDelegate.swift */,
 				18A1A8A6204598B400AC93E2 /* Main.storyboard */,
 				18A1A8A9204598B400AC93E2 /* Assets.xcassets */,
 				18A1A8AB204598B400AC93E2 /* LaunchScreen.storyboard */,
 				18A1A8AE204598B400AC93E2 /* Info.plist */,
-				185C8BB12046EF5000938506 /* PlugPagCafe.swift */,
 			);
 			path = "PlugPagCafe-Swift";
+			sourceTree = "<group>";
+		};
+		18A1A8B4204598FA00AC93E2 /* libPlugPag */ = {
+			isa = PBXGroup;
+			children = (
+				185D91AC237DFF6500D432D2 /* PlugPag.bundle */,
+				185D91AB237DFF6500D432D2 /* PlugPag.framework */,
+			);
+			path = libPlugPag;
 			sourceTree = "<group>";
 		};
 		18A1A8B52045995200AC93E2 /* Frameworks */ = {
@@ -133,13 +145,21 @@
 		18A1A8CB2045A9A700AC93E2 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				18A1A8A4204598B400AC93E2 /* MainViewController.swift */,
-				18A1A8BA2045A1E500AC93E2 /* DeviceViewController.swift */,
-				185C8BB3204722B200938506 /* ListViewController.swift */,
-				187B22B4206AAB9600C4FDA4 /* TableViewController.swift */,
-				18ACC854219CA68000469B1C /* InstallmentsTableViewController.swift */,
+				1843DB6423832536004A252B /* SaleListView */,
+				1843DB6323832527004A252B /* DeviceView */,
+				1843DB6223832516004A252B /* MainView */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		18A1A8CC2045C37A00AC93E2 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				185C8BB12046EF5000938506 /* PlugPagCafe.swift */,
+				18A1A8CD2045C38700AC93E2 /* UIUtils.swift */,
+				185D91B12382C2FF00D432D2 /* TransactionManager.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		A47E229B83D3B2FD5BCAA71A /* Pods */ = {
@@ -214,7 +234,7 @@
 			files = (
 				18A1A8AD204598B400AC93E2 /* LaunchScreen.storyboard in Resources */,
 				18A1A8AA204598B400AC93E2 /* Assets.xcassets in Resources */,
-				18246ED522CA8B2B0032D6F7 /* PlugPag.bundle in Resources */,
+				185D91AE237DFF6600D432D2 /* PlugPag.bundle in Resources */,
 				18A1A8A8204598B400AC93E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,7 +248,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PlugPagCafe-Swift/Pods-PlugPagCafe-Swift-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PlugPagCafe-Swift/Pods-PlugPagCafe-Swift-resources.sh",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -237,7 +257,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlugPagCafe-Swift/Pods-PlugPagCafe-Swift-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlugPagCafe-Swift/Pods-PlugPagCafe-Swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		917778AD72D3CD4B345A1255 /* [CP] Check Pods Manifest.lock */ = {
@@ -265,14 +285,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A1A8A5204598B400AC93E2 /* MainViewController.swift in Sources */,
-				187B22B5206AAB9600C4FDA4 /* TableViewController.swift in Sources */,
+				18A1A8A5204598B400AC93E2 /* SaleViewController.swift in Sources */,
 				18A1A8BB2045A1E500AC93E2 /* DeviceViewController.swift in Sources */,
-				185C8BB4204722B200938506 /* ListViewController.swift in Sources */,
+				185C8BB4204722B200938506 /* SaleListViewController.swift in Sources */,
+				185D91B22382C2FF00D432D2 /* TransactionManager.swift in Sources */,
 				18A1A8A3204598B400AC93E2 /* AppDelegate.swift in Sources */,
-				18ACC855219CA68000469B1C /* InstallmentsTableViewController.swift in Sources */,
+				1843DB6823833682004A252B /* SaleListViewModel.swift in Sources */,
 				185C8BB22046EF5000938506 /* PlugPagCafe.swift in Sources */,
-				18246ED822CA8B3D0032D6F7 /* UIUtils.swift in Sources */,
+				18A1A8CE2045C38700AC93E2 /* UIUtils.swift in Sources */,
+				1843DB6A23833E40004A252B /* DeviceViewModel.swift in Sources */,
+				1843DB6623832623004A252B /* SaleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,8 +435,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VC4W292XYC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PlugPagCafe-Swift",
+				);
 				INFOPLIST_FILE = "PlugPagCafe-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -422,7 +448,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PlugPagCafe-Swift",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uol.pagseguro.PlugPagCafe-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = uol.pagseguro.demo.plugpag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PlugPagCafe-Swift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -436,8 +462,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VC4W292XYC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PlugPagCafe-Swift",
+				);
 				INFOPLIST_FILE = "PlugPagCafe-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -445,7 +475,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PlugPagCafe-Swift",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uol.pagseguro.PlugPagCafe-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = uol.pagseguro.demo.plugpag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PlugPagCafe-Swift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
