@@ -1,5 +1,9 @@
 # PlugPag 3
 
+## 3.3.0 - 27/01/2020
+- [Android] Correção de bugs
+- [Android] SDK mínimo: 16 -> 19
+
 ## 3.2.0 - 19/11/2019
 - [iOS] Atualizações de Bluetooth
 
