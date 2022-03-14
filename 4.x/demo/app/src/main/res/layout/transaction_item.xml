@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/payment_buttons_style"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_15">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelDatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        android:text="@string/datetime"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/datetime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelDatetime"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        android:text="@string/transaction_value"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelDatetime" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        app:layout_constraintBottom_toBottomOf="@id/labelValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelValue"
+        app:layout_constraintTop_toTopOf="@id/labelValue" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelTransactionCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        android:text="@string/transaction_code"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelValue" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/transactionCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        app:layout_constraintBottom_toBottomOf="@id/labelTransactionCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelTransactionCode"
+        app:layout_constraintTop_toTopOf="@id/labelTransactionCode" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelTransactionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        android:text="@string/transaction_id"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelTransactionCode" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/transactionId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        app:layout_constraintBottom_toBottomOf="@id/labelTransactionId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelTransactionId"
+        app:layout_constraintTop_toTopOf="@id/labelTransactionId" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelCardBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        android:text="@string/card_brand"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelTransactionId" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cardBrand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        app:layout_constraintBottom_toBottomOf="@id/labelCardBrand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelCardBrand"
+        app:layout_constraintTop_toTopOf="@id/labelCardBrand" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

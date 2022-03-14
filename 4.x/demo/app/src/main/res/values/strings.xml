@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">PlugPag Integradores</string>
+    <string name="pagamentos">Pagamentos</string>
+    <string name="relatorio_vendas">Relatório de Vendas</string>
+    <string name="dispositivos_bluetooth">Dispositivos Bluetooth</string>
+
+    <string name="conexao_bluetooth">Conexão Bluetooth</string>
+    <string name="relatorios">Relatorios</string>
+    <string name="autenticacao">Autenticação</string>
+
+    <string name="qrcode">QRCode</string>
+    <string name="credito">Crédito</string>
+    <string name="debito">Débito</string>
+    <string name="voucher">Voucher</string>
+    <string name="pre_auto">Pré-Auto</string>
+    <string name="pix">Pix</string>
+    <string name="estorno">Estorno</string>
+    <string name="parcelamento">Parcelamento</string>
+
+    <string name="avista">À Vista</string>
+    <string name="comprador">Comprador</string>
+    <string name="vendedor">Vendedor</string>
+
+    <string name="datetime">Data/hora:</string>
+    <string name="transaction_value">Valor:</string>
+    <string name="transaction_code">Código:</string>
+    <string name="transaction_id">ID:</string>
+    <string name="card_brand">Bandeira:</string>
+    <string name="message_selected_bluetooth_device">Aparelho %s selecionado</string>
+    <string name="error_message_selected_bluetooth_device">Erro ao realizar pareamento</string>
+
+    <string name="pagar">Pagar</string>
+    <string name="tipo_qrcode">Tipo QRCode</string>
+    <string name="inCash">1x</string>
+
+    <string-array name="installments_amount">
+        <item>1x</item>
+        <item>2x</item>
+        <item>3x</item>
+        <item>4x</item>
+        <item>5x</item>
+        <item>6x</item>
+        <item>7x</item>
+        <item>8x</item>
+        <item>9x</item>
+        <item>10x</item>
+        <item>11x</item>
+        <item>12x</item>
+        <item>13x</item>
+        <item>14x</item>
+        <item>15x</item>
+        <item>16x</item>
+        <item>17x</item>
+        <item>18x</item>
+    </string-array>
+
+    <string-array name="installment_types">
+        <item>@string/vendedor</item>
+        <item>@string/comprador</item>
+    </string-array>
+
+    <string-array name="transaction_type">
+        <item>@string/debito</item>
+        <item>@string/credito</item>
+    </string-array>
+
+    <string name="implementar">Chamar direto DoPayment</string>
+    <string name="valormenor">Valor digitado é menor que 5 Reais</string>
+    <string name="invalidValue">Valor digitado invalido ou nulo</string>
+    <string name="loading_message">Carregando, por favor aguarde.</string>
+    <string name="transaction_not_realized">Transação não realizada.</string>
+    <string name="authentication_success">Autenticado na plugpag</string>
+    <string name="authentication_failed">
+        Autenticação não pode ser executada, por gentileza refaça o login.
+    </string>
+
+    <string name="transaction_sucess">
+        Transação Finalizada\n
+        Error code: %1$s \n
+        Message: %2$s \n
+        Transaction ID: %3$s \n
+        Transaction code: %4$s \n
+    </string>
+
+    <string name="estorno_sucess">
+        Estorno Finalizado\n
+        Error code: %1$s \n
+        Message: %2$s \n
+        Transaction ID: %3$s \n
+        Transaction code: %4$s \n
+    </string>
+
+</resources>

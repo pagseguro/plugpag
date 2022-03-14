@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetPayment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:padding="@dimen/padding_15"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView
+        android:id="@+id/title_bs_view"
+        style="@style/title_view"
+        app:layout_constraintBottom_toTopOf="@+id/bottomSheetQrcode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomSheetQrcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/txtLabelMethod" >
+
+        <TextView
+            android:id="@+id/txtLabelTypeQr"
+            style="@style/Label"
+            android:text="@string/tipo_qrcode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spnTypeSale"
+            style="@style/bottomsheet_buttons_style"
+            android:background="@drawable/payment_buttons_style"
+            android:entries="@array/transaction_type"
+            android:minHeight="?android:listPreferredItemHeight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLabelTypeQr" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txtLabelMethod"
+        style="@style/Label"
+        android:text="@string/parcelamento"
+        app:layout_constraintBottom_toTopOf="@+id/spnInstallmentsAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spnInstallmentsAmount"
+        style="@style/bottomsheet_buttons_style"
+        android:layout_width="@dimen/layout_size_105"
+        android:background="@drawable/payment_buttons_style"
+        android:entries="@array/installments_amount"
+        android:minHeight="?android:listPreferredItemHeight"
+        app:layout_constraintBottom_toTopOf="@+id/btnPay"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spnInstallmentType"
+        style="@style/bottomsheet_buttons_style"
+        android:background="@drawable/payment_buttons_style"
+        android:entries="@array/installment_types"
+        android:minHeight="?android:listPreferredItemHeight"
+        app:layout_constraintBottom_toBottomOf="@+id/spnInstallmentsAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spnInstallmentsAmount" />
+
+    <Button
+        android:id="@+id/btnPay"
+        style="@style/bottomsheet_buttons_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/payment_buttons_style"
+        android:text="@string/pagar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

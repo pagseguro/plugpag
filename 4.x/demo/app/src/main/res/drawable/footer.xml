@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/ic_yellow_tab"
+
+        android:gravity="left|bottom" />
+
+    <item android:drawable="@drawable/ic_blue_detail"
+        android:gravity="left|bottom" />
+
+</layer-list>

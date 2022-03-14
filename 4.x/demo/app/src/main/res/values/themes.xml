@@ -1,0 +1,77 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PlugPagIntegradores" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="main_buttons_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/layout_size_110</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_margin">@dimen/margin_15</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/textsize_20</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="payment_buttons">
+        <item name="android:layout_width">@dimen/layout_size_105</item>
+        <item name="android:layout_height">@dimen/layout_size_105</item>
+        <item name="android:layout_marginTop">@dimen/margin_25</item>
+        <item name="android:padding">@dimen/padding_20</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+
+    <style name="bottomsheet_buttons_style" >
+        <item name="android:layout_width">@dimen/layout_size_110</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_15</item>
+        <item name="android:layout_marginBottom">@dimen/margin_10</item>
+        <item name="android:padding">@dimen/padding_10</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="title_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/margin_15</item>
+        <item name="android:textSize">@dimen/textsize_25</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingStart">@dimen/padding_25</item>
+        <item name="android:paddingEnd">@dimen/padding_0</item>
+    </style>
+
+    <style name="logo_style">
+        <item name="android:layout_width">@dimen/layout_size_0</item>
+        <item name="android:layout_height">@dimen/layout_size_45</item>
+        <item name="android:layout_marginTop">@dimen/margin_15</item>
+        <item name="android:layout_marginStart">@dimen/margin_20</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:src">@drawable/logo</item>
+    </style>
+
+    <style name="footer_style">
+        <item name="android:layout_width">@dimen/layout_size_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:src">@drawable/footer</item>
+    </style>
+
+    <style name="Label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/margin_10</item>
+        <item name="android:textSize">@dimen/textsize_20</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

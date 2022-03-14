@@ -1,0 +1,25 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        flatDir {
+            dirs 'libs'
+        }
+
+        maven {
+            url 'http://nexus.pagseguro.intranet/repository/public'
+            allowInsecureProtocol = true
+        }
+        maven {
+            url 'http://nexus.pagseguro.intranet/repository/uol.pagseguro.embarcado'
+            allowInsecureProtocol = true
+        }
+        maven {
+            url 'http://nexus.pagseguro.intranet/repository/uol.pagseguro.android'
+            allowInsecureProtocol = true
+        }
+    }
+}
+rootProject.name = "PlugPag Integradores"
+include ':app'

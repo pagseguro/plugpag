@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_0">0dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_25">25dp</dimen>
+    <dimen name="layout_padding">16dp</dimen>
+
+    <dimen name="margin_05">5dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+
+    <dimen name="textsize_15">15sp</dimen>
+    <dimen name="textsize_20">20sp</dimen>
+    <dimen name="textsize_25">25sp</dimen>
+    <dimen name="textsize_55">55sp</dimen>
+
+    <dimen name="cornerRadius">20dp</dimen>
+    <dimen name="strokeWidth">0.5</dimen>
+
+    <dimen name="layout_size_0">0dp</dimen>
+    <dimen name="layout_size_45">45dp</dimen>
+    <dimen name="layout_size_65">65dp</dimen>
+    <dimen name="layout_size_105">105dp</dimen>
+    <dimen name="layout_size_110">110dp</dimen>
+    <dimen name="layout_size_150">150dp</dimen>
+    <dimen name="layout_size_175">175dp</dimen>
+    <dimen name="layout_size_200">200dp</dimen>
+    <dimen name="layout_size_250">250dp</dimen>
+
+</resources>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/value_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_size_175"
+        android:background="@drawable/payment_header_style"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/value_field"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_size_105"
+        android:layout_marginHorizontal="@dimen/margin_25"
+        android:inputType="numberDecimal"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/textsize_55"
+        app:layout_constraintBottom_toBottomOf="@+id/value_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/title_view"
+        style="@style/title_view"
+        android:text="@string/pagamentos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/value_layout" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomSheetPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/qrcode_button"
+                style="@style/payment_buttons"
+                android:background="@drawable/payment_buttons_style"
+                android:src="@drawable/ic_qrcode"
+                android:layout_marginTop="@dimen/margin_10"
+                app:layout_constraintEnd_toStartOf="@id/credit_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qrcode"
+                app:layout_constraintEnd_toEndOf="@+id/qrcode_button"
+                app:layout_constraintStart_toStartOf="@+id/qrcode_button"
+                app:layout_constraintTop_toBottomOf="@+id/qrcode_button" />
+
+            <ImageButton
+                android:id="@+id/credit_button"
+                style="@style/payment_buttons"
+                android:background="@drawable/payment_buttons_style"
+                android:src="@drawable/ic_credit"
+                android:layout_marginTop="@dimen/margin_10"
+                app:layout_constraintEnd_toStartOf="@id/debit_button"
+                app:layout_constraintStart_toEndOf="@id/qrcode_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/credito"
+                app:layout_constraintEnd_toEndOf="@+id/credit_button"
+                app:layout_constraintStart_toStartOf="@+id/credit_button"
+                app:layout_constraintTop_toBottomOf="@+id/credit_button" />
+
+            <ImageButton
+                android:id="@+id/debit_button"
+                style="@style/payment_buttons"
+                android:background="@drawable/payment_buttons_style"
+                android:src="@drawable/ic_debit"
+                android:layout_marginTop="@dimen/margin_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/credit_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/debito"
+                app:layout_constraintEnd_toEndOf="@+id/debit_button"
+                app:layout_constraintStart_toStartOf="@+id/debit_button"
+                app:layout_constraintTop_toBottomOf="@+id/debit_button" />
+
+            <ImageButton
+                android:id="@+id/voucher_button"
+                style="@style/payment_buttons"
+                android:background="@drawable/payment_buttons_style"
+                android:src="@drawable/ic_voucher"
+                app:layout_constraintEnd_toStartOf="@id/pix_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/qrcode_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/voucher"
+                app:layout_constraintEnd_toEndOf="@+id/voucher_button"
+                app:layout_constraintStart_toStartOf="@+id/voucher_button"
+                app:layout_constraintTop_toBottomOf="@+id/voucher_button" />
+
+            <ImageButton
+                android:id="@+id/pix_button"
+                style="@style/payment_buttons"
+                android:background="@drawable/payment_buttons_style"
+                android:src="@drawable/ic_pix"
+                app:layout_constraintEnd_toStartOf="@id/estorno_button"
+                app:layout_constraintStart_toEndOf="@id/voucher_button"
+                app:layout_constraintTop_toBottomOf="@id/debit_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pix"
+                app:layout_constraintEnd_toEndOf="@+id/pix_button"
+                app:layout_constraintStart_toStartOf="@+id/pix_button"
+                app:layout_constraintTop_toBottomOf="@+id/pix_button" />
+
+            <ImageButton
+                android:id="@+id/estorno_button"
+                style="@style/payment_buttons"
+                android:background="@drawable/payment_buttons_style"
+                android:src="@drawable/ic_estorno"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/pix_button"
+                app:layout_constraintTop_toBottomOf="@id/debit_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/estorno"
+                app:layout_constraintEnd_toEndOf="@+id/estorno_button"
+                app:layout_constraintStart_toStartOf="@+id/estorno_button"
+                app:layout_constraintTop_toBottomOf="@+id/estorno_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/logo"
+        style="@style/logo_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/footer"
+        style="@style/footer_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
