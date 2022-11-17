@@ -9,7 +9,7 @@ Mais informações, documentos, demos e acessos à biblioteca podem ser encontra
 
 - [PlugPag 1.x][link-1.x]
 - [PlugPag 3.x][link-3.x]
-
+- [PlugPag 4.x][link-4.x]
 
 
 # Comunidade de desenvolvedores
@@ -47,22 +47,24 @@ Atualmente a versão é disponibilizada para as seguintes plataformas:
 - Android
 - iOS
 
-Em breve serão disponibilizadas versões para:
-- Windows
-- Linux
-- Embarcados (ARM)
+## PlugPag 4.x
 
+Dando continuidade à versão [3.x][link-3.x], a versão [4.x][link-4.x] foi criada para adicionar novos modelos de leitores do [PagSeguro][link-pagseguro] e suportar novas atualizações de features e performance.
+
+Com o lançamento da versão [3.x][link-3.x], não haverá mais modificações (correções ou melhorias) na versão [3.x][link-3.x].
+
+Atualmente a versão é disponibilizada para a plataforma Android.
+
+Em breve será disponibilizada para a plataforma iOS.
 
 # Novidades
 
 As novidades das novas versões estão todas presentes no nosso [changelog][link-changelog].
 
 
-
-
-
 [link-pagseguro]: https://pagseguro.uol.com.br/ (PagSeguro)
 [link-forum-desenvolvedores]: https://dev.pagseguro.uol.com.br/ (Fórum de desenvolvedores)
 [link-1.x]: ./1.x (PlugPag 1.x)
 [link-3.x]: ./3.x (PlugPag 3.x)
+[link-4.x]: ./4.x (PlugPag 4.x)
 [link-changelog]: ./CHANGELOG.MD (changelog)
