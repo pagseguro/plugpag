@@ -51,7 +51,7 @@ Atualmente a versão é disponibilizada para as seguintes plataformas:
 
 Dando continuidade à versão [3.x][link-3.x], a versão [4.x][link-4.x] foi criada para adicionar novos modelos de leitores do [PagSeguro][link-pagseguro] e suportar novas atualizações de features e performance.
 
-Com o lançamento da versão [3.x][link-3.x], não haverá mais modificações (correções ou melhorias) na versão [3.x][link-3.x].
+Com o lançamento da versão [4.x][link-4.x], não haverá mais modificações (correções ou melhorias) na versão [3.x][link-3.x].
 
 Atualmente a versão é disponibilizada para a plataforma Android.
 
