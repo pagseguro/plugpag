@@ -3,21 +3,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        flatDir {
-            dirs 'libs'
-        }
-
         maven {
-            url 'http://nexus.pagseguro.intranet/repository/public'
-            allowInsecureProtocol = true
-        }
-        maven {
-            url 'http://nexus.pagseguro.intranet/repository/uol.pagseguro.embarcado'
-            allowInsecureProtocol = true
-        }
-        maven {
-            url 'http://nexus.pagseguro.intranet/repository/uol.pagseguro.android'
-            allowInsecureProtocol = true
+            url 'https://github.com/pagseguromaster/plugpag/raw/master/4.x/android'
         }
     }
 }

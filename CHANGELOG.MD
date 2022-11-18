@@ -1,3 +1,10 @@
+# PlugPag 4
+
+## 4.5.1 - 14/03/2022
+- [Android] Inclusão de pagamento via PIX e QRCode
+- [Android] Suporte a novos modelos de terminais
+- [Android] Correção de bugs
+
 # PlugPag 3
 
 ## 3.3.0 - 27/01/2020
