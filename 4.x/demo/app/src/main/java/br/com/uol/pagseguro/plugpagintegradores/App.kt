@@ -47,7 +47,7 @@ class App : Application(), KodeinAware {
                     "0.0.0"
                 )
             }
-            bind<PlugPag>() with singleton { PlugPag(instance(), instance()) }
+            bind<PlugPag>() with singleton { PlugPag(instance()) }
 
             bind<LoggerContract>() with singleton { LogcatLogger() }
 

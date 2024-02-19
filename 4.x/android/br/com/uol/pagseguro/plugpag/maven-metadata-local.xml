@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <groupId>android.br.com.uol.pagseguro</groupId>
+  <groupId>br.com.uol.pagseguro</groupId>
   <artifactId>plugpag</artifactId>
   <versioning>
-    <release>4.9.4</release>
+    <release>4.10.0</release>
     <versions>
       <version>4.9.1</version>
       <version>4.9.4</version>
+      <version>4.10.0</version>
     </versions>
-    <lastUpdated>20230516143646</lastUpdated>
+    <lastUpdated>20240219224921</lastUpdated>
   </versioning>
 </metadata>
