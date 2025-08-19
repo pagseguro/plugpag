@@ -1,11 +1,12 @@
 package br.com.uol.pagseguro.plugpagintegradores.ui.home
 
 import android.os.Bundle
-import android.widget.Toast
+import android.view.View
 import androidx.core.app.ActivityCompat
 import br.com.uol.pagseguro.plugpagintegradores.R
 import br.com.uol.pagseguro.plugpagintegradores.databinding.ActivityHomeBinding
 import br.com.uol.pagseguro.plugpagintegradores.extensions.createProgressDialog
+import br.com.uol.pagseguro.plugpagintegradores.extensions.showToast
 import br.com.uol.pagseguro.plugpagintegradores.presentation.auth.AuthenticationContract
 import br.com.uol.pagseguro.plugpagintegradores.presentation.permission.PermissionContract
 import br.com.uol.pagseguro.plugpagintegradores.ui.base.BaseActivity
@@ -14,12 +15,14 @@ import br.com.uol.pagseguro.plugpagintegradores.ui.list.ListTransactionActivity
 import br.com.uol.pagseguro.plugpagintegradores.ui.payment.PaymentMethodActivity
 import org.kodein.di.generic.instance
 
-class HomeActivity : BaseActivity(),
+class HomeActivity :
+    BaseActivity(),
     PermissionContract.View,
     AuthenticationContract.View {
 
     companion object {
         const val PERMISSIONS_REQUEST_CODE = 0x1234
+        const val REFUND_TAG = "estorno"
     }
 
     private val binding by lazy { ActivityHomeBinding.inflate(layoutInflater) }
@@ -31,23 +34,21 @@ class HomeActivity : BaseActivity(),
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         insertListeners()
-    }
-
-    override fun onResume() {
-        super.onResume()
         presenterPermission.bind(this)
         presenterPermission.requestPermissions(this, PERMISSIONS_REQUEST_CODE)
-
         presenterAuthentication.attach(this)
-        presenterAuthentication.checkAuthentication()
-        presenterAuthentication.checkBluetoothDevice()
-
     }
 
-    override fun onPause() {
-        super.onPause()
+    override fun onStart() {
+        super.onStart()
+        presenterAuthentication.checkAuthentication()
+        presenterAuthentication.checkBluetoothDevice()
+    }
+
+    override fun onDestroy() {
         presenterAuthentication.detach()
         presenterPermission.unbind()
+        super.onDestroy()
     }
 
     private fun insertListeners() {
@@ -66,12 +67,16 @@ class HomeActivity : BaseActivity(),
         binding.relatorioButton.setOnClickListener {
             startActivity(
                 ListTransactionActivity.getCallingIntent(this)
-                    .putExtra("estorno",false)
+                    .putExtra(REFUND_TAG, false)
             )
         }
 
         binding.autenticacaoButton.setOnClickListener {
             presenterAuthentication.requestAuthentication()
+        }
+
+        binding.removerAutenticacaoButton.setOnClickListener {
+            presenterAuthentication.invalidateAuthentication()
         }
     }
 
@@ -94,14 +99,18 @@ class HomeActivity : BaseActivity(),
     }
 
     override fun showAuthenticatedSession() {
-        Toast.makeText(this, R.string.authentication_success, Toast.LENGTH_SHORT).show()
+        binding.autenticacaoButton.visibility = View.GONE
+        binding.removerAutenticacaoButton.visibility = View.VISIBLE
+        showMessage(getString(R.string.authentication_success))
     }
 
     override fun showMissingAuthenticationView() {
-        Toast.makeText(this, R.string.authentication_failed, Toast.LENGTH_SHORT).show()
+        binding.autenticacaoButton.visibility = View.VISIBLE
+        binding.removerAutenticacaoButton.visibility = View.GONE
+        showMessage(getString(R.string.authentication_failed))
     }
 
-    override fun showToast(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    override fun showMessage(message: String) {
+        showToast(message)
     }
 }

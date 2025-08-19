@@ -13,6 +13,4 @@ class PermissionContract {
         fun unbind()
         fun requestPermissions(activity: Activity, requestCode: Int)
     }
-
-
 }

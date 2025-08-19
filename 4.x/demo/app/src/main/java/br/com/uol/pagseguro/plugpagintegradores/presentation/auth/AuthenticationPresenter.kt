@@ -27,61 +27,64 @@ class AuthenticationPresenter(
     }
 
     override fun checkAuthentication() {
-        disposables.add(authenticationUseCase.checkAuthentication()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .doOnSubscribe { view?.showLoadingAnimation() }
-            .doOnSuccess {
-                if (it) {
-                    view?.showAuthenticatedSession()
-                } else {
-                    view?.showMissingAuthenticationView()
+        disposables.add(
+            authenticationUseCase.checkAuthentication()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnSubscribe { view?.showLoadingAnimation() }
+                .doOnSuccess {
+                    if (it) {
+                        view?.showAuthenticatedSession()
+                    } else {
+                        view?.showMissingAuthenticationView()
+                    }
+                    view?.hideLoadingAnimation()
                 }
-
-                view?.hideLoadingAnimation()
-            }
-            .doOnError {
-                view?.hideLoadingAnimation()
-            }
-            .subscribe())
+                .doOnError {
+                    view?.hideLoadingAnimation()
+                }
+                .subscribe()
+        )
     }
 
     override fun checkBluetoothDevice() {
-        disposables.add(Single
-            .create<String> {
-                try {
-                    it.onSuccess(storage.getSelectedBluetoothDevice())
-                } catch (e: Exception) {
-                    it.tryOnError(e)
-                }
-            }
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribeBy(
-                onSuccess = { deviceName ->
-                    view?.apply {
-                        if (deviceName.isNotEmpty()) {
-                            showToast(deviceName)
-                        }
+        disposables.add(
+            Single
+                .create<String> {
+                    try {
+                        it.onSuccess(storage.getSelectedBluetoothDevice())
+                    } catch (e: Exception) {
+                        it.tryOnError(e)
                     }
-                },
-
-                onError = { error ->
-                    view?.showToast(error.message.toString())
                 }
-            ))
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeBy(
+                    onSuccess = { deviceName ->
+                        view?.apply {
+                            if (deviceName.isNotEmpty()) {
+                                showMessage(deviceName)
+                            }
+                        }
+                    },
+
+                    onError = { error ->
+                        view?.showMessage(error.message.toString())
+                    }
+                )
+        )
     }
 
     override fun requestAuthentication() {
-            authenticationUseCase.requestAuthentication(object : PlugPagAuthenticationListener {
-                override fun onSuccess() {
-                    checkAuthentication()
-                }
+        authenticationUseCase.requestAuthentication(object : PlugPagAuthenticationListener {
+            override fun onSuccess() {
+                checkAuthentication()
+            }
 
-                override fun onError() {
-                    checkAuthentication()
-                }
-            })
+            override fun onError() {
+                checkAuthentication()
+            }
+        })
     }
 
     override fun invalidateAuthentication() {
@@ -94,5 +97,4 @@ class AuthenticationPresenter(
     override fun sleep() = authenticationUseCase.sleep()
 
     override fun wakeup() = authenticationUseCase.wakeup()
-
 }

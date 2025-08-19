@@ -2,6 +2,7 @@ package br.com.uol.pagseguro.plugpagintegradores.extensions
 
 import android.content.Context
 import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import br.com.uol.pagseguro.plugpagintegradores.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -25,4 +26,7 @@ fun Context.createProgressDialog(): AlertDialog {
         setPositiveButton(null, null)
         setCancelable(false)
     }
+}
+fun Context.showToast(text: String) {
+    Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
 }

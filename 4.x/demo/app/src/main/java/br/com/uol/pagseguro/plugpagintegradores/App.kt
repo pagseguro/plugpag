@@ -3,6 +3,7 @@ package br.com.uol.pagseguro.plugpagintegradores
 import android.Manifest
 import android.app.Application
 import android.content.Context
+import android.os.Build
 import br.com.uol.pagseguro.plugpag.PlugPag
 import br.com.uol.pagseguro.plugpag.PlugPagAppIdentification
 import br.com.uol.pagseguro.plugpagintegradores.data.local.DataStorageContract
@@ -32,10 +33,39 @@ import org.kodein.di.generic.instance
 import org.kodein.di.generic.provider
 import org.kodein.di.generic.singleton
 
-
 class App : Application(), KodeinAware {
 
+    companion object {
+        const val APP_NAME = "PlugPagIntegradores"
+        const val APP_VERSION = "0.0.0"
+    }
+
     override val kodein = ConfigurableKodein(mutable = true)
+
+    private fun getListOfPermissions(): List<String> {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            return listOf(
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.READ_PHONE_STATE,
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.READ_MEDIA_AUDIO,
+                Manifest.permission.BLUETOOTH,
+                Manifest.permission.BLUETOOTH_SCAN,
+                Manifest.permission.BLUETOOTH_CONNECT
+            )
+        }
+
+        return listOf(
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.READ_PHONE_STATE,
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.BLUETOOTH
+        )
+    }
 
     init {
         kodein.addConfig {
@@ -43,8 +73,8 @@ class App : Application(), KodeinAware {
             bind<Context>() with singleton { this@App }
             bind<PlugPagAppIdentification>() with singleton {
                 PlugPagAppIdentification(
-                    "PlugPagIntegradores",
-                    "0.0.0"
+                    APP_NAME,
+                    APP_VERSION
                 )
             }
             bind<PlugPag>() with singleton { PlugPag(instance()) }
@@ -57,6 +87,7 @@ class App : Application(), KodeinAware {
 
             bind<BluetoothContract.Presenter>() with singleton {
                 BluetoothPresenter(
+                    instance(),
                     instance(),
                     instance()
                 )
@@ -90,13 +121,7 @@ class App : Application(), KodeinAware {
             bind<AppPermissionsUseCaseContract>() with provider {
                 AppPermissionsUseCase(
                     instance(),
-                    listOf(
-                        Manifest.permission.READ_EXTERNAL_STORAGE,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                        Manifest.permission.READ_PHONE_STATE,
-                        Manifest.permission.ACCESS_FINE_LOCATION,
-                        Manifest.permission.ACCESS_COARSE_LOCATION
-                    )
+                    getListOfPermissions()
                 )
             }
 

@@ -1,7 +1,6 @@
 package br.com.uol.pagseguro.plugpagintegradores.presentation.auth
 
 import br.com.uol.pagseguro.plugpag.PlugPagAuthenticationListener
-import br.com.uol.pagseguro.plugpag.PlugPagInitializationResult
 import io.reactivex.rxjava3.core.Single
 
 interface AuthenticationUseCaseContract {
@@ -17,5 +16,4 @@ interface AuthenticationUseCaseContract {
     fun sleep()
 
     fun wakeup()
-
 }

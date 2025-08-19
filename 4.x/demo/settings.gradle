@@ -1,12 +1,2 @@
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-        maven {
-            url 'https://github.com/pagseguromaster/plugpag/raw/master/4.x/android'
-        }
-    }
-}
 rootProject.name = "PlugPag Integradores"
 include ':app'

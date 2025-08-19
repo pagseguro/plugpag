@@ -64,6 +64,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/relatorio_button" />
 
+            <Button
+                android:id="@+id/remover_autenticacao_button"
+                style="@style/main_buttons_style"
+                android:visibility="gone"
+                android:background="@drawable/payment_buttons_style"
+                android:text="@string/remover_autenticacao"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/autenticacao_button" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

@@ -46,7 +46,6 @@ class ListBluetoothDeviceActivity : AppCompatActivity(), KodeinAware, BluetoothC
         }
     }
 
-
     override fun onResume() {
         super.onResume()
         presenter.attach(this)
@@ -87,5 +86,4 @@ class ListBluetoothDeviceActivity : AppCompatActivity(), KodeinAware, BluetoothC
             .show()
         presenter.saveSelectedBluetoothDevice(device)
     }
-
 }

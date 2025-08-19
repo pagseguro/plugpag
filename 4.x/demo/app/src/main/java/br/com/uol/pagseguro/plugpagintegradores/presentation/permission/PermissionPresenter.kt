@@ -23,23 +23,24 @@ class PermissionPresenter(
     }
 
     override fun requestPermissions(activity: Activity, requestCode: Int) {
-        disposables.add(Completable
-            .create {
-                val missingPermissions = permissionsUseCase.getMissingPermissions()
+        disposables.add(
+            Completable
+                .create {
+                    val missingPermissions = permissionsUseCase.getMissingPermissions()
 
-                if (missingPermissions.isNotEmpty()) {
-                    permissionsUseCase.requestPermissions(
-                        activity,
-                        missingPermissions,
-                        requestCode
-                    )
+                    if (missingPermissions.isNotEmpty()) {
+                        permissionsUseCase.requestPermissions(
+                            activity,
+                            missingPermissions,
+                            requestCode
+                        )
+                    }
+
+                    it.onComplete()
                 }
-
-                it.onComplete()
-            }
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe())
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe()
+        )
     }
-
 }
