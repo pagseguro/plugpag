@@ -1,6 +1,5 @@
 package br.com.uol.pagseguro.plugpagintegradores.presentation.auth
 
-
 interface AuthenticationContract {
 
     interface View {
@@ -8,7 +7,7 @@ interface AuthenticationContract {
         fun hideLoadingAnimation()
         fun showAuthenticatedSession()
         fun showMissingAuthenticationView()
-        fun showToast(message: String)
+        fun showMessage(message: String)
     }
 
     interface Presenter {
@@ -22,5 +21,4 @@ interface AuthenticationContract {
         fun sleep()
         fun wakeup()
     }
-
 }

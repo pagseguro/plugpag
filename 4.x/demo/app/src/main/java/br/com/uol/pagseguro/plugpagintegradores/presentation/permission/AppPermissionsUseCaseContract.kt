@@ -7,5 +7,4 @@ interface AppPermissionsUseCaseContract {
     fun getMissingPermissions(): Array<String>
 
     fun requestPermissions(activity: Activity, permissions: Array<String>, requestCode: Int)
-
 }

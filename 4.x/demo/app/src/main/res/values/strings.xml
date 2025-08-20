@@ -7,6 +7,7 @@
     <string name="conexao_bluetooth">Conexão Bluetooth</string>
     <string name="relatorios">Relatorios</string>
     <string name="autenticacao">Autenticação</string>
+    <string name="remover_autenticacao">Remover autenticação</string>
 
     <string name="qrcode">QRCode</string>
     <string name="credito">Crédito</string>
@@ -70,6 +71,7 @@
     <string name="loading_message">Carregando, por favor aguarde.</string>
     <string name="transaction_not_realized">Transação não realizada.</string>
     <string name="authentication_success">Autenticado na plugpag</string>
+    <string name="removed_authentication_success">Autenticação removida</string>
     <string name="authentication_failed">
         Autenticação não pode ser executada, por gentileza refaça o login.
     </string>

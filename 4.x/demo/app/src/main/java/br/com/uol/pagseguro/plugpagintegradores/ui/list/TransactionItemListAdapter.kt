@@ -52,5 +52,4 @@ class TransactionItemListAdapter(
         val transactionCode: AppCompatTextView = root.findViewById(R.id.transactionCode)
         val cardBrand: AppCompatTextView = root.findViewById(R.id.cardBrand)
     }
-
 }

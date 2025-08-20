@@ -35,5 +35,4 @@ class AuthenticationUseCase(
     override fun sleep() = plugpag.sleepPinpad()
 
     override fun wakeup() = plugpag.wakeupPinpad()
-
 }

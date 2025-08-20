@@ -28,5 +28,4 @@ class AppPermissionsUseCase(
     ) {
         ActivityCompat.requestPermissions(activity, permissions, requestCode)
     }
-
 }

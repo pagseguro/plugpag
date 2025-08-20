@@ -28,15 +28,12 @@ interface PaymentContract {
         const val TRANSACTION_CODE = "TRANSACTION_CODE"
     }
 
-
     interface View {
-        fun showToast(message: String)
         fun showLoading()
         fun disableLoading()
 
         fun showText(text: String)
         fun showTransactionResult(result: PlugPagTransactionResult?)
-
     }
 
     interface Presenter {
@@ -57,7 +54,5 @@ interface PaymentContract {
         )
 
         fun sendReceiptSMS(phoneNumber: String)
-
     }
-
 }

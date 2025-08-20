@@ -10,7 +10,6 @@ import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
-import android.widget.Toast
 import br.com.uol.pagseguro.plugpag.IPlugPag
 import br.com.uol.pagseguro.plugpag.PlugPagTransactionResult
 import br.com.uol.pagseguro.plugpagintegradores.R
@@ -19,14 +18,18 @@ import br.com.uol.pagseguro.plugpagintegradores.databinding.BottomSheetPaymentBi
 import br.com.uol.pagseguro.plugpagintegradores.extensions.createMaterialDialog
 import br.com.uol.pagseguro.plugpagintegradores.extensions.createProgressDialog
 import br.com.uol.pagseguro.plugpagintegradores.extensions.removeFormat
+import br.com.uol.pagseguro.plugpagintegradores.extensions.showToast
 import br.com.uol.pagseguro.plugpagintegradores.extensions.toCurrency
 import br.com.uol.pagseguro.plugpagintegradores.presentation.payment.PaymentContract
 import br.com.uol.pagseguro.plugpagintegradores.ui.base.BaseActivity
+import br.com.uol.pagseguro.plugpagintegradores.ui.home.HomeActivity.Companion.REFUND_TAG
 import br.com.uol.pagseguro.plugpagintegradores.ui.list.ListTransactionActivity
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import org.kodein.di.generic.instance
 
-class PaymentMethodActivity : BaseActivity(), PaymentContract.View,
+class PaymentMethodActivity :
+    BaseActivity(),
+    PaymentContract.View,
     View.OnClickListener {
 
     private val binding by lazy { ActivityPaymentMethodBinding.inflate(layoutInflater) }
@@ -121,7 +124,7 @@ class PaymentMethodActivity : BaseActivity(), PaymentContract.View,
             R.id.pix_button -> pixPayment()
             R.id.estorno_button -> startActivity(
                 ListTransactionActivity.getCallingIntent(this)
-                    .putExtra("estorno", true)
+                    .putExtra(REFUND_TAG, true)
             )
             else -> dismissBottomSheet()
         }
@@ -147,7 +150,7 @@ class PaymentMethodActivity : BaseActivity(), PaymentContract.View,
 
     override fun showText(text: String) {
         dialog.setMessage(text)
-        Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+        showToast(text)
     }
 
     override fun showTransactionResult(result: PlugPagTransactionResult?) {
@@ -171,7 +174,7 @@ class PaymentMethodActivity : BaseActivity(), PaymentContract.View,
         }
     }
 
-    //Payment Methods
+    // Payment Methods
 
     private fun qrCodePayment() {
         showQRPaymentType()
@@ -182,8 +185,10 @@ class PaymentMethodActivity : BaseActivity(), PaymentContract.View,
             override fun onNothingSelected(parent: AdapterView<*>?) = hideInstallments()
 
             override fun onItemSelected(
-                parent: AdapterView<*>?, view: View?,
-                position: Int, id: Long
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
             ) {
                 when (bindingBottomSheet.spnTypeSale.selectedItemPosition) {
                     0 -> hideInstallments()
@@ -246,10 +251,11 @@ class PaymentMethodActivity : BaseActivity(), PaymentContract.View,
 
     private fun doPay(amount: Int, paymentType: Int, installmentType: Int, installments: Int) {
         Log.i(
-            "transaction", "Transacao: ${convertPaymentTypeToText(paymentType)} " +
-                    "Tipo: ${convertInstallmentTypeToText(installmentType)} " +
-                    "Valor: $amount " +
-                    "Parcelas: $installments"
+            "transaction",
+            "Transacao: ${convertPaymentTypeToText(paymentType)} " +
+                "Tipo: ${convertInstallmentTypeToText(installmentType)} " +
+                "Valor: $amount " +
+                "Parcelas: $installments"
         )
 
         presenter.pay(
@@ -319,9 +325,6 @@ class PaymentMethodActivity : BaseActivity(), PaymentContract.View,
         }
     }
 
-    override fun showToast(message: String) =
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
-
     // Show/Hide Components Views
 
     fun showQRPaymentType() {
@@ -357,10 +360,12 @@ class PaymentMethodActivity : BaseActivity(), PaymentContract.View,
                 }
 
                 override fun onItemSelected(
-                    parent: AdapterView<*>?, view: View?,
-                    position: Int, id: Long
+                    parent: AdapterView<*>?,
+                    view: View?,
+                    position: Int,
+                    id: Long
                 ) {
-                    if (bindingBottomSheet.spnInstallmentsAmount.selectedItem == getString(R.string.inCash)) {
+                    if (isCash()) {
                         hideInstallmentsType()
                     } else {
                         showInstallmentsType()
@@ -368,6 +373,9 @@ class PaymentMethodActivity : BaseActivity(), PaymentContract.View,
                 }
             }
     }
+
+    fun isCash() =
+        bindingBottomSheet.spnInstallmentsAmount.selectedItem == getString(R.string.inCash)
 
     fun hideInstallments() {
         bindingBottomSheet.txtLabelMethod.visibility = View.GONE

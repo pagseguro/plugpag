@@ -3,13 +3,14 @@
   <groupId>br.com.uol.pagseguro</groupId>
   <artifactId>plugpag</artifactId>
   <versioning>
-    <release>4.10.3</release>
+    <release>4.12.0-beta</release>
     <versions>
       <version>4.9.1</version>
       <version>4.9.4</version>
       <version>4.10.0</version>
       <version>4.10.3</version>
+      <version>4.12.0-beta</version>
     </versions>
-    <lastUpdated>20240920205347</lastUpdated>
+    <lastUpdated>20250813173000</lastUpdated>
   </versioning>
 </metadata>

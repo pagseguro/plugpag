@@ -5,8 +5,7 @@ import android.bluetooth.BluetoothDevice
 
 interface BluetoothContract {
 
-    interface Model {
-    }
+    interface Model
 
     interface View {
         fun showPairedDevices(devices: List<BluetoothDevice>)
@@ -22,5 +21,4 @@ interface BluetoothContract {
         fun saveSelectedBluetoothDevice(device: BluetoothDevice)
         fun getSelectedBluetoothDeviceName(activity: Activity): String
     }
-
 }

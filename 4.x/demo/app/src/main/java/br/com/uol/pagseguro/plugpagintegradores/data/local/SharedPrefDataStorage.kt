@@ -2,7 +2,6 @@ package br.com.uol.pagseguro.plugpagintegradores.data.local
 
 import android.bluetooth.BluetoothDevice
 import android.content.Context
-import android.util.Log
 import br.com.uol.pagseguro.plugpag.PlugPag
 import br.com.uol.pagseguro.plugpag.PlugPagTransactionResult
 import br.com.uol.pagseguro.plugpagintegradores.data.model.TransactionSummary
@@ -59,14 +58,14 @@ class SharedPrefDataStorage(
 
     override fun saveTransactionResult(result: PlugPagTransactionResult): Boolean {
         val tokens = mutableListOf(
-            "${result.date}",
-            "${result.time}",
+            result.date,
+            result.time,
             "${result.result}",
-            "${result.errorCode}",
-            "${result.transactionId}",
-            "${result.transactionCode}",
-            "${result.cardBrand}",
-            "${result.amount}",
+            result.errorCode,
+            result.transactionId,
+            result.transactionCode,
+            result.cardBrand,
+            result.amount,
             "${result.paymentType}"
         )
         val count = getTransactionCount() + 1
@@ -125,5 +124,4 @@ class SharedPrefDataStorage(
             false
         }
     }
-
 }

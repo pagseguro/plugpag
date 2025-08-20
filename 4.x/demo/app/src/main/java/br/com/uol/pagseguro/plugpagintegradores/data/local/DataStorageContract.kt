@@ -14,5 +14,4 @@ interface DataStorageContract {
     fun getTransactionCount(): Int
     fun getTransaction(position: Int): TransactionSummary?
     fun deleteTransaction(position: Int): Boolean
-
 }

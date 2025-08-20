@@ -16,7 +16,7 @@ class ListTransactionPresenter(
 ) : ListTransactionContract.Presenter {
 
     private val disposables = CompositeDisposable()
-    private var view : ListTransactionContract.View? = null
+    private var view: ListTransactionContract.View? = null
 
     override fun attach(view: ListTransactionContract.View) {
         logger.debug(this, "Attaching to ${view::class.java}")
@@ -59,26 +59,28 @@ class ListTransactionPresenter(
                     onError = {
                         logger.error("Erro ao carregar lista de transações")
                     }
-                ))
+                )
+        )
     }
 
     override fun startVoidPayment(transaction: TransactionSummary) {
-        disposables.add(Single
-            .create<Pair<PlugPagDevice, TransactionSummary>> { emitter ->
-                val device = PlugPagDevice(storage.getSelectedBluetoothDevice())
-                emitter.onSuccess(Pair(device, transaction))
-            }
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribeBy(
-                onSuccess = {
-                    //todo: implementar chamada de estorno
-                    view?.showVoidTransaction(it.first, it.second, transaction.id)
-                },
-
-                onError = {
-                    logger.debug("Erro ao estornar")
+        disposables.add(
+            Single
+                .create<Pair<PlugPagDevice, TransactionSummary>> { emitter ->
+                    val device = PlugPagDevice(storage.getSelectedBluetoothDevice())
+                    emitter.onSuccess(Pair(device, transaction))
                 }
-            ))
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeBy(
+                    onSuccess = {
+                        view?.showVoidTransaction(it.first, it.second, transaction.id)
+                    },
+
+                    onError = {
+                        logger.debug("Erro ao estornar")
+                    }
+                )
+        )
     }
 }

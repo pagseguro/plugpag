@@ -5,5 +5,4 @@ import android.bluetooth.BluetoothDevice
 interface BluetoothUseCaseContract {
 
     fun getPairedDevices(): List<BluetoothDevice>
-
 }

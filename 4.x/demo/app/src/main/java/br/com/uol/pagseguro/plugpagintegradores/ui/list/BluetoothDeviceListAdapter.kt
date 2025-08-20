@@ -26,7 +26,7 @@ class BluetoothDeviceListAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.name.text = dataset[position].name
-        holder.macaddress.text = dataset[position].address
+        holder.macAddress.text = dataset[position].address
         holder.itemView.setOnClickListener { itemClickListener(dataset[position]) }
     }
 
@@ -38,7 +38,6 @@ class BluetoothDeviceListAdapter(
 
     class ViewHolder(root: View) : RecyclerView.ViewHolder(root) {
         val name: AppCompatTextView = root.findViewById(R.id.name)
-        val macaddress: AppCompatTextView = root.findViewById(R.id.macaddress)
+        val macAddress: AppCompatTextView = root.findViewById(R.id.macaddress)
     }
-
 }
