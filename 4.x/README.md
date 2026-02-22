@@ -6,6 +6,7 @@
 |------------------|------------|----------------|
 | `1.0.0`          | 13/08/2025 | 4.12.0-beta    |
 | `1.0.1`          | 13/10/2025 | 4.11.0         |
+| `1.0.2`          | 22/02/2026 | 4.11.1         |
 
 ## Documentacões relacionadas
 Para ver as descrições de classe e métodos, códigos de erro e exemplos acesso o seguinte documento: https://github.com/pagseguro/plugpag/blob/master/4.x/documento/Manual%20de%20Integra%C3%A7%C3%A3o%20-%20PlugPag%20Android%20Integradores.pdf.
@@ -17,6 +18,9 @@ Para ver as descrições de classe e métodos, códigos de erro e exemplos acess
 - As chamadas dos métodos da classe PlugPag devem ser feitas em uma Thread que execute em background pois podem demorar para finalizar a execução. Caso a execução seja feita na Thread principal (UI Thread), o aplicativo pode apresentar um ANR (Application Not Responding). Além disso, alguns métodos executam transações utilizando chamadas remotas pela internet, o que impossibilita suas chamadas na Thread principal.
 - Não é possível fazer chamadas da biblioteca caso o usuário tenha permissões de root no aparelho por motivos de segurança.
 - O parâmetro userReference da classe PlugPagPaymentData deve possuir menos de 10 caracteres;
+
+## Versão 4.11.1
+- Atualização de certificados.
 
 ## Versão 4.11.0
 - Atualização da PP para compatibilidade com a feature de tamanho de página 16 kb;
