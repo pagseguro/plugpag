@@ -29,6 +29,12 @@ Para ver as descrições de classe e métodos, códigos de erro e exemplos acess
 - Atualização da versão do Java;
 - Descontinuando suporte para versões do Android abaixo do Android 5.0.
 
+## Versão 4.15.1
+- Adicionando suporte para minizinha NFC2 (modelo Newland ME30s)
+- Melhorias na comunicação com o servidor PagBank
+- Adicionado suporte ao Pix NFC no fluxo de pagamento PIX
+- Remoção do sistema de autenticação adicionando na versão 4.12.0-beta
+
 #### Changelog
 
 **Modificações na biblioteca PlugPag:**
