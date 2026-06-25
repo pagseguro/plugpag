@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import br.com.uol.pagseguro.libswitch.comm.BComp.context
 import br.com.uol.pagseguro.plugpag.PlugPagDevice
 import br.com.uol.pagseguro.plugpag.PlugPagTransactionResult
 import br.com.uol.pagseguro.plugpagintegradores.R
@@ -53,7 +52,7 @@ class ListTransactionActivity :
     }
 
     private fun initViews() {
-        viewManager = LinearLayoutManager(context)
+        viewManager = LinearLayoutManager(this)
         viewAdapter = TransactionItemListAdapter(mutableListOf(), ::onTransactionSelected)
 
         binding.transactionList.apply {
