@@ -1,5 +1,9 @@
 # **PlugPag**
 
+# Descontinuação de novas integrações
+
+**Atenção** A PlugPag não receberá mais atualização e não oferecerá suporte a novas integrações.
+
 # Introdução
 PlugPag é uma biblioteca para integrar aplicativos, via bluetooth, com os leitores (Mini, Minizinha e Mobi Pin 10) e terminais (Moderninha Pro e Moderninha Wifi) do [PagSeguro][link-pagseguro].
 
